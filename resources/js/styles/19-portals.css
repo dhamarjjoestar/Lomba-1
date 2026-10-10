@@ -1,0 +1,701 @@
+/* =========================================================
+   PORTAL — DEVELOPER CREDITS
+   ========================================================= */
+
+.developer-panel {
+  padding: 4px 0 0;
+}
+
+.developer-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  margin-bottom: 14px;
+  padding-bottom: 13px;
+
+  border-bottom: 1px solid #e4dfd5;
+}
+
+.developer-header .eyebrow {
+  margin-bottom: 4px;
+
+  color: #72827a;
+  font-size: 7.5px;
+}
+
+.developer-header h3 {
+  margin: 0 0 5px;
+
+  color: #193c30;
+
+  font: 800 21px var(--app-font-serif);
+}
+
+.developer-header p {
+  max-width: 550px;
+
+  margin: 0;
+
+  color: #748079;
+
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+
+.developer-badge {
+  flex: 0 0 auto;
+
+  padding: 7px 10px;
+
+  border: 1px solid #d8e1da;
+  border-radius: 999px;
+
+  background: #edf5ef;
+
+  color: #4d705d;
+
+  font: 800 7.5px var(--app-font-mono);
+}
+
+
+/* cards */
+
+.developer-list {
+  display: grid;
+
+  gap: 9px;
+}
+
+.developer-card {
+  display: grid;
+
+  grid-template-columns: 38px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  border: 1px solid #e0dbd2;
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf8,
+      #faf9f4
+    );
+
+  transition:
+    transform .16s ease,
+    box-shadow .16s ease;
+}
+
+.developer-card:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(20,48,38,.045);
+}
+
+.developer-index {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 9px;
+
+  background: #e8f0e9;
+
+  color: #4e705d;
+
+  font: 800 8px var(--app-font-mono);
+}
+
+.developer-info {
+  min-width: 0;
+}
+
+.developer-info strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #25473b;
+
+  font: 800 14px var(--app-font-serif);
+
+  line-height: 1.15;
+}
+
+.developer-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.developer-meta span {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 4px 7px;
+
+  border: 1px solid #e1ddd4;
+  border-radius: 6px;
+
+  background: #f8f6ef;
+
+  color: #74817b;
+
+  font: 800 7px var(--app-font-mono);
+}
+
+.developer-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: 13px;
+  padding-top: 10px;
+
+  border-top: 1px solid #e5e0d7;
+
+  color: #8a928d;
+
+  font: 800 6.5px var(--app-font-mono);
+
+  letter-spacing: .06em;
+}
+
+@media (max-width: 600px) {
+  .developer-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .developer-footer {
+    flex-direction: column;
+  }
+}
+/* =========================================================
+   PORTAL — RESEARCH ROADMAP SHORTCUT
+   ========================================================= */
+
+.portal-roadmap-item {
+  position: relative;
+
+  border-color: #d3dfd7 !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef5ef,
+      #fbfaf6
+    ) !important;
+}
+
+.portal-roadmap-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 9px;
+  bottom: 9px;
+
+  width: 3px;
+
+  border-radius: 999px;
+
+  background: #3c7557;
+}
+
+.portal-roadmap-item > svg:first-child {
+  color: #3b7154;
+}
+
+.portal-roadmap-item strong {
+  color: #24483a;
+}
+
+.portal-roadmap-item small {
+  color: #6e8076;
+}
+
+.portal-roadmap-item:hover {
+  border-color: #c5d7cb !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf3ec,
+      #faf8f2
+    ) !important;
+}
+
+/* =========================================================
+   PORTAL — REFERENCE LIBRARY
+   ========================================================= */
+
+.reference-library {
+  gap: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.reference-library-head {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  gap: 12px;
+
+  align-items: stretch;
+}
+
+.reference-library-intro {
+  margin: 0 !important;
+
+  min-width: 0;
+}
+
+.reference-library-intro .portal-section-kicker {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #7b887f;
+
+  font: 800 7px var(--app-font-mono);
+  letter-spacing: .10em;
+}
+
+.reference-library-intro strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #21473a;
+
+  font: 800 20px var(--app-font-serif);
+
+  line-height: 1;
+}
+
+.reference-library-intro p {
+  margin: 0;
+
+  max-width: 520px;
+
+  color: #718078;
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+
+/* source count */
+
+.reference-library-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 92px;
+
+  padding: 12px;
+
+  border: 1px solid #d8e1da;
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eef5ef,
+      #fbfaf6
+    );
+
+  text-align: center;
+}
+
+.reference-library-meta span {
+  color: #75857c;
+
+  font: 800 6.5px var(--app-font-mono);
+
+  letter-spacing: .08em;
+}
+
+.reference-library-meta strong {
+  margin-top: 3px;
+
+  color: #32654d;
+
+  font: 800 25px var(--app-font-serif);
+
+  line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   TOOLBAR
+   --------------------------------------------------------- */
+
+.reference-library-toolbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 9px 11px;
+
+  border: 1px solid #e0ddd5;
+  border-radius: 9px;
+
+  background: #faf8f3;
+}
+
+.reference-toolbar-label {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #77847d;
+
+  font: 800 6.5px var(--app-font-mono);
+  letter-spacing: .08em;
+}
+
+.reference-library-toolbar p {
+  margin: 0;
+
+  color: #7a8780;
+
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.reference-library-status {
+  flex: 0 0 auto;
+
+  padding: 5px 7px;
+
+  border-radius: 999px;
+
+  background: #edf3ee;
+
+  color: #61796a;
+
+  font: 800 6.5px var(--app-font-mono);
+}
+
+
+/* ---------------------------------------------------------
+   LIST
+   --------------------------------------------------------- */
+
+.reference-library-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+/* ---------------------------------------------------------
+   CARD
+   --------------------------------------------------------- */
+
+.reference-library-card {
+  position: relative;
+
+  padding: 11px 12px !important;
+
+  border: 1px solid #dfdbd2 !important;
+  border-radius: 10px !important;
+
+  background: #fffdf8 !important;
+
+  box-shadow:
+    0 3px 10px rgba(20, 48, 38, .025);
+
+  transition:
+    transform .15s ease,
+    border-color .15s ease,
+    box-shadow .15s ease;
+}
+
+.reference-library-card:hover {
+  transform: translateY(-1px);
+
+  border-color: #cfd9d1 !important;
+
+  box-shadow:
+    0 6px 15px rgba(20, 48, 38, .045);
+}
+
+
+/* top */
+
+.reference-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin-bottom: 6px;
+}
+
+.reference-library-card .portal-reference-meta {
+  display: flex;
+
+  gap: 5px;
+}
+
+.reference-library-card .portal-reference-meta span {
+  padding: 3px 5px;
+
+  border-radius: 5px;
+
+  background: #f1f3ee;
+
+  color: #708078;
+
+  font: 800 6.5px var(--app-font-mono);
+}
+
+.reference-library-card .portal-reference-meta span:first-child {
+  background: #eef5ef;
+
+  color: #4b705d;
+}
+
+.reference-source-code {
+  color: #9aa19c;
+
+  font: 800 6px var(--app-font-mono);
+
+  letter-spacing: .08em;
+}
+
+
+/* title */
+
+.reference-library-title {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #294a3f;
+
+  font: 800 11.5px var(--app-font-serif);
+
+  line-height: 1.32;
+}
+
+
+/* author */
+
+.reference-library-author {
+  margin: 0 0 3px;
+
+  color: #65766e;
+
+  font-size: 8.5px;
+
+  line-height: 1.4;
+}
+
+
+/* publisher */
+
+.reference-library-publisher {
+  margin: 0;
+
+  color: #87918b;
+
+  font-size: 8px;
+
+  line-height: 1.35;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+.reference-library-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin-top: 8px;
+  padding-top: 7px;
+
+  border-top: 1px dashed #e3dfd7;
+}
+
+.reference-library-footer code {
+  min-width: 0;
+  max-width: 62%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #818b86;
+
+  font: 600 6.5px var(--app-font-mono);
+}
+
+.reference-no-doi {
+  color: #9a9f9b;
+
+  font-size: 7px;
+}
+
+.reference-open-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  flex: 0 0 auto;
+
+  color: #35684f !important;
+
+  font: 800 7px var(--app-font-mono);
+
+  text-decoration: none;
+}
+
+.reference-open-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   NOTE
+   --------------------------------------------------------- */
+
+.reference-library-note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  padding: 10px 11px;
+
+  border: 1px solid #d9e2db;
+  border-radius: 9px;
+
+  background: #eff5f0;
+}
+
+.reference-library-note svg {
+  flex: 0 0 auto;
+
+  color: #557764;
+}
+
+.reference-library-note strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #3e614f;
+
+  font-size: 8.5px;
+}
+
+.reference-library-note p {
+  margin: 0;
+
+  color: #718079;
+
+  font-size: 7.8px;
+
+  line-height: 1.45;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 520px) {
+
+  .reference-library-head {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-library-meta {
+    min-height: 65px;
+  }
+
+  .reference-library-toolbar {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .reference-library-status {
+    align-self: flex-start;
+  }
+}
+/* =========================================================
+   SILICA2CON — PREMIUM ECONOMIC SCREENING
+   ========================================================= */
+
+.economics-premium {
+  --eco-green: #173d2f;
+  --eco-green-2: #2f7354;
+  --eco-green-soft: #edf5ef;
+
+  --eco-gold: #b68a43;
+  --eco-gold-soft: #faf3e4;
+
+  --eco-paper: #fffdf8;
+  --eco-sand: #f7f2e7;
+
+  --eco-line: #ddd8ce;
+  --eco-muted: #74817b;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px !important;
+}
+
+

@@ -1,0 +1,112 @@
+/* Evidence Engine UI — provenance layer */
+.evidence-engine-columns {
+  align-items: stretch;
+}
+
+.evidence-provenance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.evidence-provenance-grid > div {
+  padding: 11px 12px;
+  border: 1px solid #e1e5df;
+  border-radius: 10px;
+  background: #fafbf8;
+}
+
+.evidence-provenance-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: #7d8a83;
+  font: 800 7px var(--app-font-mono);
+  letter-spacing: .1em;
+}
+
+.evidence-provenance-grid strong {
+  display: block;
+  color: #294b40;
+  font: 800 11px/1.35 var(--app-font-sans);
+}
+
+.evidence-engine-panel {
+  min-height: 100%;
+}
+
+.evidence-engine-panel .panel-head svg {
+  color: #3f765b;
+}
+
+.evidence-engine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.evidence-engine-list > div {
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 9px;
+  padding: 9px 0;
+  border-bottom: 1px solid #ebe9e2;
+}
+
+.evidence-engine-list > div:last-child {
+  border-bottom: 0;
+}
+
+.evidence-engine-list > div > span,
+.evidence-trace-list > div > span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: #edf3ee;
+  color: #5e7c6a;
+  font: 800 7px var(--app-font-mono);
+}
+
+.evidence-engine-list p,
+.evidence-trace-list p {
+  margin: 0;
+  color: #65756d;
+  font-size: 9.5px;
+  line-height: 1.55;
+}
+
+.evidence-engine-list.compact > div {
+  padding: 8px 0;
+}
+
+.evidence-trace-panel {
+  margin-top: 0;
+}
+
+.evidence-trace-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 12px;
+}
+
+.evidence-trace-list > div {
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #ebe9e2;
+}
+
+.evidence-trace-list > div:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .evidence-provenance-grid {
+    grid-template-columns: 1fr;
+  }
+}

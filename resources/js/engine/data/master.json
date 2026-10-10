@@ -1,0 +1,2952 @@
+{
+  "dataset_meta": {
+    "project": "SILICA2CON",
+    "version": "2.0",
+    "as_of": "2026-08-26",
+    "scope": "Evidence-based preliminary decision-support system for silica-rich geothermal residue and paving-block candidate formulation",
+    "golden_rule": "No numerical claim without provenance; assumptions never appear as experimental facts.",
+    "statuses": [
+      "REPORTED",
+      "DERIVED",
+      "CALCULATED",
+      "ASSUMPTION",
+      "EXTRAPOLATED",
+      "UNKNOWN",
+      "DATA_REQUIRED",
+      "VALIDATION_REQUIRED",
+      "EXPERIMENT_REQUIRED",
+      "OUTSIDE_EVIDENCE_RANGE",
+      "VALIDATED"
+    ],
+    "evidence_levels": [
+      "DIRECT",
+      "RELATED",
+      "EXTRAPOLATION",
+      "UNKNOWN",
+      "CONTRADICTORY",
+      "CONTEXT_DEPENDENT"
+    ],
+    "claim_policy": {
+      "universal_optimum": false,
+      "sni_compliance_without_test": false,
+      "net_co2_reduction_without_full_inventory": false,
+      "economic_viability_without_tea": false,
+      "paving_strength_prediction_without_calibrated_dataset": false,
+      "literature_result_as_silica2con_result": false
+    },
+    "source_types": [
+      "LITERATURE",
+      "PRIMARY_EXPERIMENT",
+      "SILICA2CON_EXPERIMENT",
+      "NORMATIVE_STANDARD",
+      "GOVERNMENT",
+      "INDUSTRY",
+      "MARKET",
+      "USER_INPUT",
+      "ASSUMPTION",
+      "CALCULATED",
+      "UNKNOWN"
+    ],
+    "dss_states": [
+      "NOT_SUPPORTED",
+      "DATA_REQUIRED",
+      "CONDITIONAL",
+      "PRELIMINARY_PROMISING",
+      "VALIDATED"
+    ],
+    "sni_result_states": [
+      "PRELIMINARY_PASS",
+      "PRELIMINARY_FAIL",
+      "UNKNOWN",
+      "DATA_REQUIRED",
+      "NOT_APPLICABLE"
+    ],
+    "product_types": [
+      "PAVING_BLOCK",
+      "CONCRETE",
+      "MORTAR",
+      "GEOPOLYMER",
+      "OTHER",
+      "UNKNOWN"
+    ],
+    "replacement_bases": [
+      "CEMENT MASS",
+      "BINDER_MASS",
+      "TOTAL_DRY_MIX_MASS",
+      "VOLUME",
+      "OTHER",
+      "UNKNOWN"
+    ]
+  },
+  "source_registry": [
+    {
+      "id": "SRC-001",
+      "authors": "Pambudi et al.",
+      "year": 2015,
+      "title": "The behavior of silica in geothermal brine from Dieng geothermal power plant, Indonesia",
+      "journal": "Geothermics",
+      "volume": "54",
+      "pages": "109-114",
+      "doi": "10.1016/j.geothermics.2014.12.003",
+      "type": "literature",
+      "context": "Dieng geothermal brine; silica polymerization/deposition",
+      "url": "https://doi.org/10.1016/j.geothermics.2014.12.003",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-002",
+      "authors": "Utami, W.S.; Herdianita, N.R.; Atmaja, R.W.",
+      "year": 2014,
+      "title": "The Effect of Temperature and pH on the Formation of Silica Scaling at Dieng Geothermal Field, Indonesia",
+      "journal": "Proceedings, Thirty-Ninth Workshop on Geothermal Reservoir Engineering",
+      "type": "literature",
+      "context": "Dieng surface scaling; temperature and pH",
+      "url": null,
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-003",
+      "authors": "Agustinus, E.T.S.; Syafri, I.; Rosana, M.F.; Zulkarnain, I.",
+      "year": 2018,
+      "title": "Scale Prevention Technique to Minimized Scaling on Re-Injection Pipes in Dieng Geothermal Field, Central Java Province, Indonesia",
+      "journal": "Indonesian Journal on Geoscience",
+      "volume": "5(2)",
+      "pages": "129-136",
+      "doi": "10.17014/ijog.5.2.129-136",
+      "type": "literature",
+      "context": "reinjection scaling control and sludge",
+      "url": "https://doi.org/10.17014/ijog.5.2.129-136",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-004",
+      "authors": "Widiyandari, H.; Adhani, S.H.; Subagio, A.; Purwanto, A.",
+      "year": 2021,
+      "title": "Synthesis of silica xerogel from geothermal sludge by ultrasonic assisted alkali extraction-acid precipitation",
+      "journal": "Journal of Physics: Conference Series",
+      "volume": "1825(1)",
+      "article": "012071",
+      "doi": "10.1088/1742-6596/1825/1/012071",
+      "type": "literature",
+      "context": "Dieng geothermal sludge generation and silica processing",
+      "url": "https://doi.org/10.1088/1742-6596/1825/1/012071",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-005",
+      "authors": "Mulyana, C.; Mahmudah; Faizal, F.",
+      "year": 2022,
+      "title": "Analysis of Silica Activity Index from Geothermal Silica Scaling",
+      "journal": "Journal of Physics: Conference Series",
+      "volume": "2344(1)",
+      "article": "012016",
+      "doi": "10.1088/1742-6596/2344/1/012016",
+      "type": "literature",
+      "context": "Dieng silica scaling characterization; SiO2 and SAI",
+      "url": "https://doi.org/10.1088/1742-6596/2344/1/012016",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-006",
+      "authors": "Meiyati, I.N.; Agustin, R.S.; Murtiono, E.S.",
+      "year": 2015,
+      "title": "Pemanfaatan Lumpur Geothermal (Geothermal Sludge) untuk Pengganti Sebagian Semen terhadap Kuat Tekan Mortar sebagai Suplemen Bahan Ajar Mata Kuliah Teknologi Beton Program Studi Pendidikan Teknik Bangunan UNS",
+      "journal": "Indonesian Journal of Civil Engineering Education",
+      "volume": "1(2)",
+      "doi": "10.20961/ijcee.v2i2.17936",
+      "type": "literature",
+      "context": "geothermal sludge in mortar; replacement matrix",
+      "url": "https://doi.org/10.20961/ijcee.v2i2.17936",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-007",
+      "authors": "López-Perales, J.F.; Alonso-Alonso, M.C.; Vázquez-Rodríguez, F.J.; Guzmán-Hernández, A.M.; Gómez-Zamorano, L.Y.; Rodríguez-Castellanos, E.A.; Puente-Ornelas, R.",
+      "year": 2024,
+      "title": "Geothermal Nano-SiO2 Waste as a Supplementary Cementitious Material for Concrete Exposed at High Critical Temperatures",
+      "journal": "Materials",
+      "volume": "17(17)",
+      "article": "4381",
+      "doi": "10.3390/ma17174381",
+      "type": "literature",
+      "context": "geothermal nano-SiO2 waste in concrete; strength and workability",
+      "url": "https://doi.org/10.3390/ma17174381",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-008",
+      "authors": "Liu et al.",
+      "year": 2021,
+      "title": "Effect of nano-silica as cementitious materials-reducing admixtures on the workability, mechanical properties and durability of concrete",
+      "journal": "Nanotechnology Reviews",
+      "volume": "10(1)",
+      "pages": "1395-1409",
+      "doi": "10.1515/ntrev-2021-0097",
+      "type": "literature",
+      "context": "nano-silica concrete mechanisms",
+      "url": "https://doi.org/10.1515/ntrev-2021-0097",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-009",
+      "authors": "Shah, I.H.; Miller, S.A.; Jiang, D.; Myers, R.J.",
+      "year": 2022,
+      "title": "Cement substitution with secondary materials can reduce annual global CO2 emissions by up to 1.3 gigatons",
+      "journal": "Nature Communications",
+      "volume": "13",
+      "article": "5758",
+      "doi": "10.1038/s41467-022-33289-7",
+      "type": "literature",
+      "context": "secondary materials and cement substitution at system level",
+      "url": "https://doi.org/10.1038/s41467-022-33289-7",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-010",
+      "authors": "Badan Standardisasi Nasional",
+      "year": 1996,
+      "title": "SNI 03-0691-1996: Bata beton (paving block)",
+      "type": "standard",
+      "context": "paving-block classification and requirements",
+      "url": null,
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-011",
+      "authors": "BPS-Statistics Indonesia",
+      "year": 2024,
+      "title": "Indikator Konstruksi, Triwulan IV/2023-IV/2024",
+      "type": "official-statistics",
+      "context": "construction wages and labor indicators",
+      "url": "https://www.bps.go.id",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-012",
+      "authors": "Direktorat Jenderal Bina Konstruksi, Kementerian PU",
+      "year": 2026,
+      "title": "Surat Edaran Direktur Jenderal Bina Konstruksi Nomor 47/SE/Dk/2026 tentang Tata Cara Penyusunan Perkiraan Biaya Pekerjaan Konstruksi Bidang Pekerjaan Umum",
+      "type": "official-guidance",
+      "context": "construction cost estimation framework",
+      "url": "https://binakonstruksi.pu.go.id/produk/produk-hukum/surat-edaran-direktur-jenderal-bina-konstruksi-nomor-47-se-dk-2026/",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-013",
+      "authors": "Pemerintah Kabupaten Magelang",
+      "year": 2026,
+      "title": "Standar Harga Satuan Barang/Jasa Tahun 2026",
+      "type": "official-local-price",
+      "context": "2026 reference prices for cement and sand",
+      "url": "https://jdih.magelangkab.go.id/assets/files/hukum/2025pd3308019.pdf",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-014",
+      "authors": "Kementerian ESDM / PLN tariff regulation",
+      "year": 2026,
+      "title": "Tarif tenaga listrik PLN Juli-September 2026",
+      "type": "official-tariff",
+      "context": "industrial electricity reference; I-3/TM",
+      "url": "https://www.esdm.go.id/",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-015",
+      "authors": "IEA",
+      "year": 2024,
+      "title": "Emissions Factors 2024",
+      "type": "emission-factor-dataset",
+      "context": "general emissions-factor reference; use country-specific factor when available",
+      "url": "https://www.iea.org/data-and-statistics/data-product/emissions-factors-2024",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-016",
+      "authors": "Global Cement / Indonesia cement sector reporting",
+      "year": 2026,
+      "title": "Indonesian cement sales rise in 2025",
+      "type": "industry-context",
+      "context": "reported Indonesian cement sector Scope 1 and 2 emissions intensity",
+      "url": "https://www.globalcement.com/news/20663-indonesian-cement-sales-rise-in-2025",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-017",
+      "authors": "Fikroni, A.; Juara, A.; Suharto",
+      "year": 2023,
+      "title": "Inovasi Paving Block Ramah Lingkungan dengan Memanfaatkan Limbah Geodipa Sebagai Pengganti Sebagian Semen",
+      "journal": "Jurnal Civil Engineering Study",
+      "doi": "10.34001/ces.v3i02.736",
+      "type": "literature",
+      "context": "Geodipa waste paving block; 3/5/8/10/12% cement-mass replacement; 7-day testing",
+      "url": "https://journal.unisnu.ac.id/CES/article/view/736",
+      "verification_status": "IDENTIFIED"
+    },
+    {
+      "id": "SRC-GEMASTE-2026",
+      "authors": "Dhamar Firdaus Esa Mahendra; Aditya Kusuma Wardana",
+      "year": 2026,
+      "title": "GEMASTE National Essay Competition 2026 manuscript — SILICA2CON: Silica-rich Geothermal Residue to Construction",
+      "journal": null,
+      "volume": null,
+      "pages": null,
+      "doi": null,
+      "type": "user_input",
+      "context": "Primary project manuscript supplied with SILICA2CON web upgrade; basis for preliminary economic screening and decision-support framing.",
+      "url": null,
+      "verification_status": "USER_SUPPLIED"
+    }
+  ],
+  "terminology_rules": [
+    {
+      "term": "silica-rich geothermal residue",
+      "definition": "operational umbrella term used by SILICA2CON until actual residue is fully characterized",
+      "interchangeable_with": [
+        "silica scaling",
+        "geothermal sludge",
+        "geothermal nano-SiO2 waste"
+      ],
+      "interchangeable": false
+    },
+    {
+      "term": "geothermal sludge",
+      "definition": "residual sludge reported/collected in geothermal operations",
+      "interchangeable": false
+    },
+    {
+      "term": "silica scaling",
+      "definition": "silica-rich deposit formed under geothermal fluid conditions",
+      "interchangeable": false
+    },
+    {
+      "term": "geothermal nano-SiO2 waste",
+      "definition": "specific material studied by López-Perales et al. (2024)",
+      "interchangeable": false
+    },
+    {
+      "term": "pure SiO2",
+      "definition": "high-purity silica; not assumed equivalent to geothermal residue",
+      "interchangeable": false
+    }
+  ],
+  "material_evidence": [
+    {
+      "id": "MAT-001",
+      "parameter": "geothermal sludge generation",
+      "value": 165,
+      "unit": "ton/month",
+      "material": "geothermal sludge",
+      "origin": "Dieng",
+      "source_id": "SRC-004",
+      "status": "REPORTED",
+      "transferability": "site_specific",
+      "claim": "reported sludge generation",
+      "forbidden_claims": [
+        "165 ton/month silica scaling",
+        "165 ton/month pure silica"
+      ],
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "OTHER",
+      "material_id": "MAT-001",
+      "material_identity": "geothermal sludge",
+      "material_category": "geothermal_residue",
+      "processing_state": "as_reported",
+      "limitations": []
+    },
+    {
+      "id": "MAT-002",
+      "parameter": "SiO2 content",
+      "value": ">80",
+      "unit": "wt.%",
+      "material": "geothermal silica scaling",
+      "origin": "Dieng",
+      "source_id": "SRC-005",
+      "status": "REPORTED",
+      "transferability": "sample_specific",
+      "claim": "reported SiO2 content in tested scaling sample",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "OTHER",
+      "material_id": "MAT-002",
+      "material_identity": "geothermal silica scaling",
+      "material_category": "geothermal_residue",
+      "processing_state": "as_reported",
+      "limitations": []
+    },
+    {
+      "id": "MAT-003",
+      "parameter": "Silica Activity Index",
+      "value": 79,
+      "unit": "%",
+      "qualifier": "maximum under reported test conditions",
+      "material": "geothermal silica scaling",
+      "origin": "Dieng",
+      "source_id": "SRC-005",
+      "status": "REPORTED",
+      "transferability": "test_specific",
+      "forbidden_claims": [
+        "79% pozzolanic efficiency",
+        "79% universal reactivity"
+      ],
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "OTHER",
+      "material_id": "MAT-003",
+      "material_identity": "geothermal silica scaling",
+      "material_category": "geothermal_residue",
+      "processing_state": "as_reported",
+      "limitations": []
+    },
+    {
+      "id": "MAT-004",
+      "parameter": "silica polymerization",
+      "value": "reported",
+      "unit": null,
+      "material": "Dieng geothermal brine",
+      "origin": "Dieng",
+      "source_id": "SRC-001",
+      "status": "REPORTED",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "OTHER",
+      "material_id": "MAT-004",
+      "material_identity": "Dieng geothermal brine",
+      "material_category": "geothermal_residue",
+      "processing_state": "as_reported",
+      "limitations": []
+    },
+    {
+      "id": "MAT-005",
+      "parameter": "silica scaling controls",
+      "value": "temperature, pressure and pH related",
+      "unit": null,
+      "material": "Dieng geothermal fluid/system",
+      "origin": "Dieng",
+      "source_id": "SRC-002",
+      "status": "REPORTED",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "OTHER",
+      "material_id": "MAT-005",
+      "material_identity": "Dieng geothermal fluid/system",
+      "material_category": "geothermal_residue",
+      "processing_state": "as_reported",
+      "limitations": []
+    },
+    {
+      "id": "MAT-006",
+      "parameter": "amorphous silica scale / sludge formation",
+      "value": "reported",
+      "unit": null,
+      "material": "geothermal scaling/sludge context",
+      "origin": "Dieng",
+      "source_id": "SRC-003",
+      "status": "REPORTED",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "OTHER",
+      "material_id": "MAT-006",
+      "material_identity": "geothermal scaling/sludge context",
+      "material_category": "geothermal_residue",
+      "processing_state": "as_reported",
+      "limitations": []
+    },
+    {
+      "id": "MAT-007",
+      "parameter": "silica xerogel processing",
+      "value": "demonstrated",
+      "unit": null,
+      "material": "geothermal sludge",
+      "origin": "Dieng",
+      "source_id": "SRC-004",
+      "status": "REPORTED",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "OTHER",
+      "material_id": "MAT-007",
+      "material_identity": "geothermal sludge",
+      "material_category": "geothermal_residue",
+      "processing_state": "as_reported",
+      "limitations": []
+    }
+  ],
+  "material_characterization_dictionary": [
+    {
+      "id": "CHR-001",
+      "variable": "sio2_content",
+      "unit": "wt.%",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-002",
+      "variable": "al2o3_content",
+      "unit": "wt.%",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-003",
+      "variable": "fe2o3_content",
+      "unit": "wt.%",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-004",
+      "variable": "cao_content",
+      "unit": "wt.%",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-005",
+      "variable": "mgo_content",
+      "unit": "wt.%",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-006",
+      "variable": "na2o_content",
+      "unit": "wt.%",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-007",
+      "variable": "k2o_content",
+      "unit": "wt.%",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-008",
+      "variable": "xrd_phase",
+      "unit": "categorical",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-009",
+      "variable": "moisture_content",
+      "unit": "%",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-010",
+      "variable": "d10",
+      "unit": "um",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-011",
+      "variable": "d50",
+      "unit": "um",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-012",
+      "variable": "d90",
+      "unit": "um",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-013",
+      "variable": "bet_surface_area",
+      "unit": "m2/g",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-014",
+      "variable": "bulk_density",
+      "unit": "kg/m3",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-015",
+      "variable": "specific_gravity",
+      "unit": "dimensionless",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-016",
+      "variable": "silica_activity_index",
+      "unit": "%",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-017",
+      "variable": "loi",
+      "unit": "%",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-018",
+      "variable": "pH",
+      "unit": "dimensionless",
+      "required": false,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    },
+    {
+      "id": "CHR-019",
+      "variable": "leaching_or_safety_result",
+      "unit": "test-specific",
+      "required": true,
+      "default_value": null,
+      "status": "VALIDATION_REQUIRED"
+    }
+  ],
+  "processing_routes": [
+    {
+      "id": "PRC-001",
+      "operation": "drying",
+      "evidence": "engineering-required",
+      "cost_status": "ASSUMPTION",
+      "note": "must be based on moisture and actual equipment",
+      "route_readiness": "CONDITIONAL"
+    },
+    {
+      "id": "PRC-002",
+      "operation": "grinding",
+      "evidence": "engineering-required",
+      "cost_status": "ASSUMPTION",
+      "note": "simple unit operation is not equivalent to low cost",
+      "route_readiness": "CONDITIONAL"
+    },
+    {
+      "id": "PRC-003",
+      "operation": "sieving/classification",
+      "evidence": "engineering-required",
+      "cost_status": "ASSUMPTION",
+      "route_readiness": "CONDITIONAL"
+    },
+    {
+      "id": "PRC-004",
+      "operation": "alkali extraction",
+      "evidence": "SRC-004",
+      "cost_status": "ASSUMPTION",
+      "route_readiness": "LITERATURE_SUPPORTED"
+    },
+    {
+      "id": "PRC-005",
+      "operation": "acid precipitation",
+      "evidence": "SRC-004",
+      "cost_status": "ASSUMPTION",
+      "route_readiness": "LITERATURE_SUPPORTED"
+    },
+    {
+      "id": "PRC-006",
+      "operation": "washing",
+      "evidence": "context-dependent",
+      "cost_status": "ASSUMPTION",
+      "route_readiness": "CONDITIONAL"
+    },
+    {
+      "id": "PRC-007",
+      "operation": "ultrasonic treatment",
+      "evidence": "SRC-004",
+      "cost_status": "ASSUMPTION",
+      "route_readiness": "LITERATURE_SUPPORTED"
+    }
+  ],
+  "literature_performance": [
+    {
+      "id": "PER-LIT-005",
+      "source_id": "SRC-007",
+      "material": "geothermal nano-SiO2 waste",
+      "application": "concrete",
+      "replacement_pct": 0,
+      "compressive_strength_28d_mpa": 23.03,
+      "slump_mm": 150,
+      "status": "REPORTED",
+      "transferability": "INDIRECT_TO_PAVING_BLOCK",
+      "evidence_class": "RELATED",
+      "source_type": "LITERATURE",
+      "product_type": "CONCRETE",
+      "replacement_value": 0,
+      "replacement_basis": "UNKNOWN",
+      "reported_value": 23.03,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 23.03,
+      "unit": "MPa",
+      "limitations": []
+    },
+    {
+      "id": "PER-LIT-006",
+      "source_id": "SRC-007",
+      "material": "geothermal nano-SiO2 waste",
+      "application": "concrete",
+      "replacement_pct": 20,
+      "compressive_strength_28d_mpa": 25.42,
+      "slump_mm": 90,
+      "status": "REPORTED",
+      "transferability": "INDIRECT_TO_PAVING_BLOCK",
+      "evidence_class": "RELATED",
+      "source_type": "LITERATURE",
+      "product_type": "CONCRETE",
+      "replacement_value": 20,
+      "replacement_basis": "UNKNOWN",
+      "reported_value": 25.42,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 25.42,
+      "unit": "MPa",
+      "limitations": []
+    },
+    {
+      "id": "PER-LIT-007",
+      "source_id": "SRC-007",
+      "material": "geothermal nano-SiO2 waste",
+      "application": "concrete",
+      "replacement_pct": 30,
+      "compressive_strength_28d_mpa": 28.23,
+      "slump_mm": 75,
+      "status": "REPORTED",
+      "transferability": "INDIRECT_TO_PAVING_BLOCK",
+      "evidence_class": "RELATED",
+      "source_type": "LITERATURE",
+      "product_type": "CONCRETE",
+      "replacement_value": 30,
+      "replacement_basis": "UNKNOWN",
+      "reported_value": 28.23,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 28.23,
+      "unit": "MPa",
+      "limitations": []
+    },
+    {
+      "id": "PER-LIT-008",
+      "source_id": "SRC-007",
+      "parameter": "workability_trend",
+      "value": "slump decreases as GNSW replacement increases in the reported study",
+      "status": "REPORTED",
+      "transferability": "INDIRECT",
+      "evidence_class": "CONTEXT_DEPENDENT",
+      "source_type": "LITERATURE",
+      "product_type": "UNKNOWN",
+      "limitations": []
+    },
+    {
+      "id": "PER-MEI-28-20",
+      "source_id": "SRC-006",
+      "material": "geothermal sludge",
+      "application": "mortar",
+      "replacement_pct": 20,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 28,
+      "original_value": 27.093,
+      "original_unit": "kgf/cm²",
+      "derived_value": 2.6569,
+      "derived_unit": "MPa",
+      "parameter": "compressive_strength",
+      "status": "REPORTED",
+      "transferability": "INDIRECT_TO_PAVING_BLOCK",
+      "allowed_use": "literature context only; not paving-block result",
+      "claim_safety": {
+        "highest_observed_within_study_matrix": true,
+        "universal_optimum": false
+      },
+      "evidence_class": "RELATED",
+      "source_type": "LITERATURE",
+      "product_type": "MORTAR",
+      "replacement_value": 20,
+      "testing_age": "28 days",
+      "value": 27.093,
+      "unit": "kgf/cm²",
+      "converted_value": 2.6569,
+      "converted_unit": "MPa",
+      "derived_status": "DERIVED",
+      "limitations": [
+        "literature context only; not paving-block result"
+      ]
+    },
+    {
+      "id": "PER-MEI-56-20",
+      "source_id": "SRC-006",
+      "material": "geothermal sludge",
+      "application": "mortar",
+      "replacement_pct": 20,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 56,
+      "original_value": 27.266,
+      "original_unit": "kgf/cm²",
+      "derived_value": 2.6739,
+      "derived_unit": "MPa",
+      "parameter": "compressive_strength",
+      "status": "REPORTED",
+      "transferability": "INDIRECT_TO_PAVING_BLOCK",
+      "allowed_use": "literature context only; not paving-block result",
+      "claim_safety": {
+        "highest_observed_within_study_matrix": false,
+        "universal_optimum": false
+      },
+      "evidence_class": "RELATED",
+      "source_type": "LITERATURE",
+      "product_type": "MORTAR",
+      "replacement_value": 20,
+      "testing_age": "56 days",
+      "value": 27.266,
+      "unit": "kgf/cm²",
+      "converted_value": 2.6739,
+      "converted_unit": "MPa",
+      "derived_status": "DERIVED",
+      "limitations": [
+        "literature context only; not paving-block result"
+      ]
+    },
+    {
+      "id": "PER-FIK-0",
+      "source_id": "SRC-017",
+      "material": "Geodipa waste",
+      "origin": "Geodipa",
+      "application": "paving block",
+      "replacement_pct": 0,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 7,
+      "compressive_strength_7d_mpa": 11.33,
+      "status": "REPORTED",
+      "transferability": "HIGHLY_RELEVANT_LITERATURE",
+      "allowed_use": "direct product literature benchmark; not SILICA2CON experimental validation",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "PAVING_BLOCK",
+      "replacement_value": 0,
+      "testing_age": "7 days",
+      "reported_value": 11.33,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 11.33,
+      "unit": "MPa",
+      "limitations": [
+        "direct product literature benchmark; not SILICA2CON experimental validation"
+      ]
+    },
+    {
+      "id": "PER-FIK-3",
+      "source_id": "SRC-017",
+      "material": "Geodipa waste",
+      "origin": "Geodipa",
+      "application": "paving block",
+      "replacement_pct": 3,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 7,
+      "compressive_strength_7d_mpa": 10.65,
+      "status": "REPORTED",
+      "transferability": "HIGHLY_RELEVANT_LITERATURE",
+      "allowed_use": "direct product literature benchmark; not SILICA2CON experimental validation",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "PAVING_BLOCK",
+      "replacement_value": 3,
+      "testing_age": "7 days",
+      "reported_value": 10.65,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 10.65,
+      "unit": "MPa",
+      "limitations": [
+        "direct product literature benchmark; not SILICA2CON experimental validation"
+      ]
+    },
+    {
+      "id": "PER-FIK-5",
+      "source_id": "SRC-017",
+      "material": "Geodipa waste",
+      "origin": "Geodipa",
+      "application": "paving block",
+      "replacement_pct": 5,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 7,
+      "compressive_strength_7d_mpa": 12.02,
+      "status": "REPORTED",
+      "transferability": "HIGHLY_RELEVANT_LITERATURE",
+      "allowed_use": "direct product literature benchmark; not SILICA2CON experimental validation",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "PAVING_BLOCK",
+      "replacement_value": 5,
+      "testing_age": "7 days",
+      "reported_value": 12.02,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 12.02,
+      "unit": "MPa",
+      "limitations": [
+        "direct product literature benchmark; not SILICA2CON experimental validation"
+      ]
+    },
+    {
+      "id": "PER-FIK-8",
+      "source_id": "SRC-017",
+      "material": "Geodipa waste",
+      "origin": "Geodipa",
+      "application": "paving block",
+      "replacement_pct": 8,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 7,
+      "compressive_strength_7d_mpa": 16.13,
+      "status": "REPORTED",
+      "transferability": "HIGHLY_RELEVANT_LITERATURE",
+      "allowed_use": "direct product literature benchmark; not SILICA2CON experimental validation",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "PAVING_BLOCK",
+      "replacement_value": 8,
+      "testing_age": "7 days",
+      "reported_value": 16.13,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 16.13,
+      "unit": "MPa",
+      "limitations": [
+        "direct product literature benchmark; not SILICA2CON experimental validation"
+      ]
+    },
+    {
+      "id": "PER-FIK-10",
+      "source_id": "SRC-017",
+      "material": "Geodipa waste",
+      "origin": "Geodipa",
+      "application": "paving block",
+      "replacement_pct": 10,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 7,
+      "compressive_strength_7d_mpa": 15.23,
+      "status": "REPORTED",
+      "transferability": "HIGHLY_RELEVANT_LITERATURE",
+      "allowed_use": "direct product literature benchmark; not SILICA2CON experimental validation",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "PAVING_BLOCK",
+      "replacement_value": 10,
+      "testing_age": "7 days",
+      "reported_value": 15.23,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 15.23,
+      "unit": "MPa",
+      "limitations": [
+        "direct product literature benchmark; not SILICA2CON experimental validation"
+      ]
+    },
+    {
+      "id": "PER-FIK-12",
+      "source_id": "SRC-017",
+      "material": "Geodipa waste",
+      "origin": "Geodipa",
+      "application": "paving block",
+      "replacement_pct": 12,
+      "replacement_basis": "CEMENT MASS",
+      "test_age_days": 7,
+      "compressive_strength_7d_mpa": 12.52,
+      "status": "REPORTED",
+      "transferability": "HIGHLY_RELEVANT_LITERATURE",
+      "allowed_use": "direct product literature benchmark; not SILICA2CON experimental validation",
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "PAVING_BLOCK",
+      "replacement_value": 12,
+      "testing_age": "7 days",
+      "reported_value": 12.52,
+      "reported_unit": "MPa",
+      "parameter": "compressive_strength",
+      "value": 12.52,
+      "unit": "MPa",
+      "limitations": [
+        "direct product literature benchmark; not SILICA2CON experimental validation"
+      ]
+    }
+  ],
+  "literature_context_rules": [
+    {
+      "rule": "SRC-006 data may populate literature evidence panels but not SILICA2CON experimental results",
+      "enabled": true
+    },
+    {
+      "rule": "SRC-007 data may support mechanism/trade-off discussion but not direct prediction for Dieng scaling paving blocks",
+      "enabled": true
+    },
+    {
+      "rule": "Do not merge SRC-006 and SRC-007 into one performance curve",
+      "enabled": true
+    },
+    {
+      "rule": "Do not label 20% replacement as optimum",
+      "enabled": true
+    }
+  ],
+  "candidate_formulation_schema": {
+    "fields": [
+      "mix_id",
+      "replacement_value",
+      "replacement_basis",
+      "cement_pct",
+      "fine_aggregate_pct",
+      "coarse_aggregate_pct",
+      "water_pct_or_ratio",
+      "admixture_pct",
+      "particle_class",
+      "curing_condition",
+      "target_application"
+    ],
+    "initial_status": "CANDIDATE_ONLY",
+    "evidence_range_rule": "If residue_pct lies outside direct or relevant evidence, show OUTSIDE EVIDENCE RANGE.",
+    "default_values": {
+      "residue_pct": 0,
+      "cement_pct": 20,
+      "fine_aggregate_pct": 80,
+      "coarse_aggregate_pct": 0,
+      "water_pct_or_ratio": null,
+      "admixture_pct": 0,
+      "particle_class": null,
+      "curing_condition": null,
+      "target_application": "paving block",
+      "replacement_basis": "CEMENT MASS"
+    },
+    "default_value_status": "ASSUMPTION",
+    "replacement_basis_required": true,
+    "allowed_replacement_bases": [
+      "CEMENT MASS",
+      "BINDER_MASS",
+      "TOTAL_DRY_MIX_MASS",
+      "VOLUME",
+      "OTHER",
+      "UNKNOWN"
+    ],
+    "replacement_rule": "replacement_basis is mandatory whenever replacement_value is provided."
+  },
+  "paving_block_geometry_assumptions": {
+    "default_length_mm": 200,
+    "default_width_mm": 100,
+    "default_thickness_mm": 60,
+    "volume_m3_per_block": 0.0012,
+    "density_kg_m3": 2200,
+    "mass_kg_per_block": 2.64,
+    "blocks_per_m2": 50,
+    "note": "Illustrative geometry for UI only. Not used for validated outputs without explicit user input.",
+    "calculation_enabled_by_default": false,
+    "assumption_status": "ASSUMPTION",
+    "limitations": [
+      "ILLUSTRATIVE_ONLY"
+    ]
+  },
+  "sni_requirements": {
+    "standard_id": "SNI-03-0691-1996",
+    "classification": [
+      {
+        "class": "A",
+        "intended_use": "jalan",
+        "compressive_strength_avg_mpa": 40,
+        "compressive_strength_min_mpa": 35,
+        "abrasion_avg_max_mm_min": 0.09,
+        "abrasion_min_or_equivalent_max_mm_min": 0.103,
+        "water_absorption_avg_max_pct": 3
+      },
+      {
+        "class": "B",
+        "intended_use": "peralatan parkir",
+        "compressive_strength_avg_mpa": 20,
+        "compressive_strength_min_mpa": 17,
+        "abrasion_avg_max_mm_min": 0.13,
+        "abrasion_min_or_equivalent_max_mm_min": 0.149,
+        "water_absorption_avg_max_pct": 6
+      },
+      {
+        "class": "C",
+        "intended_use": "pejalan kaki",
+        "compressive_strength_avg_mpa": 15,
+        "compressive_strength_min_mpa": 12.5,
+        "abrasion_avg_max_mm_min": 0.16,
+        "abrasion_min_or_equivalent_max_mm_min": 0.184,
+        "water_absorption_avg_max_pct": 8
+      },
+      {
+        "class": "D",
+        "intended_use": "taman dan penggunaan lain",
+        "compressive_strength_avg_mpa": 10,
+        "compressive_strength_min_mpa": 8.5,
+        "abrasion_avg_max_mm_min": 0.219,
+        "abrasion_min_or_equivalent_max_mm_min": 0.251,
+        "water_absorption_avg_max_pct": 10
+      }
+    ],
+    "appearance": "surface should be flat; no cracks/defects; corners/edges should not be easily crumbled by finger force",
+    "nominal_thickness_min_mm": 60,
+    "thickness_tolerance_plus_pct": 8,
+    "sodium_sulfate_test_required": true,
+    "sodium_sulfate_weight_loss_max_pct": 1,
+    "status": "REPORTED",
+    "compliance_rule": "PASS only when actual test results for applicable parameters are available and satisfy the selected class. Otherwise UNKNOWN/VALIDATION_REQUIRED.",
+    "source_id": "SRC-010",
+    "edition_year": 1996,
+    "verification_status": "VERIFY_REQUIRED",
+    "test_method_status": "VERIFY_REQUIRED",
+    "sampling_status": "VERIFY_REQUIRED",
+    "applicability": "PAVING_BLOCK",
+    "requirements": [
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "A",
+        "parameter": "compressive_strength_avg",
+        "requirement": 40,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "A",
+        "parameter": "compressive_strength_min",
+        "requirement": 35,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "A",
+        "parameter": "water_absorption_avg_max",
+        "requirement": 3,
+        "unit": "%",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "A",
+        "parameter": "abrasion_avg_max",
+        "requirement": 0.09,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "A",
+        "parameter": "abrasion_max",
+        "requirement": 0.103,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "B",
+        "parameter": "compressive_strength_avg",
+        "requirement": 20,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "B",
+        "parameter": "compressive_strength_min",
+        "requirement": 17,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "B",
+        "parameter": "water_absorption_avg_max",
+        "requirement": 6,
+        "unit": "%",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "B",
+        "parameter": "abrasion_avg_max",
+        "requirement": 0.13,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "B",
+        "parameter": "abrasion_max",
+        "requirement": 0.149,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "C",
+        "parameter": "compressive_strength_avg",
+        "requirement": 15,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "C",
+        "parameter": "compressive_strength_min",
+        "requirement": 12.5,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "C",
+        "parameter": "water_absorption_avg_max",
+        "requirement": 8,
+        "unit": "%",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "C",
+        "parameter": "abrasion_avg_max",
+        "requirement": 0.16,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "C",
+        "parameter": "abrasion_max",
+        "requirement": 0.184,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "D",
+        "parameter": "compressive_strength_avg",
+        "requirement": 10,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "D",
+        "parameter": "compressive_strength_min",
+        "requirement": 8.5,
+        "unit": "MPa",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "D",
+        "parameter": "water_absorption_avg_max",
+        "requirement": 10,
+        "unit": "%",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "D",
+        "parameter": "abrasion_avg_max",
+        "requirement": 0.219,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "D",
+        "parameter": "abrasion_max",
+        "requirement": 0.251,
+        "unit": "mm/min",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "ALL",
+        "parameter": "appearance",
+        "requirement": "surface should be flat; no cracks/defects; corners/edges should not be easily crumbled by finger force",
+        "unit": null,
+        "operator": null,
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "ALL",
+        "parameter": "nominal_thickness_min",
+        "requirement": 60,
+        "unit": "mm",
+        "operator": ">=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      },
+      {
+        "standard_id": "SNI-03-0691-1996",
+        "source_id": "SRC-010",
+        "edition_year": 1996,
+        "section": null,
+        "table": null,
+        "class": "ALL",
+        "parameter": "thickness_tolerance_plus",
+        "requirement": 8,
+        "unit": "%",
+        "operator": "<=",
+        "test_method": null,
+        "sampling": null,
+        "applicability": "PAVING_BLOCK",
+        "verification_status": "VERIFY_REQUIRED",
+        "status": "REPORTED"
+      }
+    ]
+  },
+  "economic_assumptions": {
+    "currency": "IDR",
+    "price_basis": "2026 Indonesia proxy; not a national statistical average",
+    "price_policy": "Editable assumptions; local quotation should replace these values for final TEA.",
+    "baseline": {
+      "cement_pc_idr_kg": 1450,
+      "fine_sand_idr_m3": 350893,
+      "fine_sand_bulk_density_kg_m3": 1600,
+      "fine_sand_idr_kg": 219.31,
+      "coarse_aggregate_idr_m3": 350000,
+      "coarse_aggregate_bulk_density_kg_m3": 1700,
+      "coarse_aggregate_idr_kg": 205.88,
+      "water_idr_m3": 15000,
+      "water_idr_l": 15,
+      "admixture_idr_kg": 15000,
+      "residue_acquisition_idr_kg": 50,
+      "transport_idr_ton_km": 12500,
+      "electricity_idr_kwh": 1114.74,
+      "general_worker_idr_day": 175000,
+      "foreman_idr_day": 200000,
+      "equipment_capex_idr": 150000000,
+      "equipment_life_years": 8,
+      "annual_operating_hours": 2000,
+      "equipment_utilization_factor": 0.7,
+      "maintenance_pct_capex_per_year": 0.05,
+      "drying_energy_kwh_t": 150,
+      "grinding_energy_kwh_t": 40,
+      "classification_energy_kwh_t": 5,
+      "process_loss_pct": 5,
+      "transport_distance_km": 25,
+      "labor_hours_per_1000_blocks": 10,
+      "machine_hours_per_1000_blocks": 3,
+      "water_process_l_per_1000_blocks": 150,
+      "scenario_status": "ASSUMPTION"
+    },
+    "conservative": {
+      "cement_pc_idr_kg": 1600,
+      "fine_sand_idr_kg": 250,
+      "coarse_aggregate_idr_kg": 250,
+      "water_idr_l": 20,
+      "admixture_idr_kg": 18000,
+      "residue_acquisition_idr_kg": 100,
+      "transport_idr_ton_km": 18000,
+      "electricity_idr_kwh": 1700,
+      "general_worker_idr_day": 200000,
+      "drying_energy_kwh_t": 250,
+      "grinding_energy_kwh_t": 60,
+      "classification_energy_kwh_t": 8,
+      "process_loss_pct": 8,
+      "transport_distance_km": 50,
+      "labor_hours_per_1000_blocks": 12,
+      "machine_hours_per_1000_blocks": 4,
+      "scenario_status": "ASSUMPTION"
+    },
+    "optimistic": {
+      "cement_pc_idr_kg": 1300,
+      "fine_sand_idr_kg": 180,
+      "coarse_aggregate_idr_kg": 180,
+      "water_idr_l": 10,
+      "admixture_idr_kg": 12000,
+      "residue_acquisition_idr_kg": 0,
+      "transport_idr_ton_km": 8000,
+      "electricity_idr_kwh": 1000,
+      "general_worker_idr_day": 160000,
+      "drying_energy_kwh_t": 100,
+      "grinding_energy_kwh_t": 25,
+      "classification_energy_kwh_t": 3,
+      "process_loss_pct": 3,
+      "transport_distance_km": 15,
+      "labor_hours_per_1000_blocks": 8,
+      "machine_hours_per_1000_blocks": 2,
+      "scenario_status": "ASSUMPTION"
+    },
+    "source_notes": [
+      "Cement and sand baseline anchored to 2026 local-government price references and cross-checked against a 2026 national-market price range article; these are proxies, not a national statistical mean.",
+      "Industrial electricity baseline uses PLN/ESDM Q3 2026 I-3/TM tariff Rp1,114.74/kWh.",
+      "Labor baseline is an explicit 2026 model assumption informed by BPS construction wage data; it is not presented as an official national 2026 wage average.",
+      "Residue cost, transport, processing energy, equipment and admixture are scenario assumptions requiring local quotation or measurement."
+    ],
+    "baseline_normalized": {
+      "cement_pc_idr_kg": {
+        "value": 1450,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "CEMENT MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "fine_sand_idr_m3": {
+        "value": 350893,
+        "unit": "IDR/m3",
+        "currency": "IDR",
+        "basis": "FINE_SAND_VOLUME",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "fine_sand_bulk_density_kg_m3": {
+        "value": 1600,
+        "unit": "kg/m3",
+        "currency": null,
+        "basis": "FINE_SAND",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "fine_sand_idr_kg": {
+        "value": 219.31,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "FINE_SAND_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "coarse_aggregate_idr_m3": {
+        "value": 350000,
+        "unit": "IDR/m3",
+        "currency": "IDR",
+        "basis": "COARSE_AGGREGATE_VOLUME",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "coarse_aggregate_bulk_density_kg_m3": {
+        "value": 1700,
+        "unit": "kg/m3",
+        "currency": null,
+        "basis": "COARSE_AGGREGATE",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "coarse_aggregate_idr_kg": {
+        "value": 205.88,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "COARSE_AGGREGATE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "water_idr_m3": {
+        "value": 15000,
+        "unit": "IDR/m3",
+        "currency": "IDR",
+        "basis": "WATER_VOLUME",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "water_idr_l": {
+        "value": 15,
+        "unit": "IDR/L",
+        "currency": "IDR",
+        "basis": "WATER_VOLUME",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "admixture_idr_kg": {
+        "value": 15000,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "ADMIXTURE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "residue_acquisition_idr_kg": {
+        "value": 50,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "transport_idr_ton_km": {
+        "value": 12500,
+        "unit": "IDR/t-km",
+        "currency": "IDR",
+        "basis": "TRANSPORT",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "electricity_idr_kwh": {
+        "value": 1114.74,
+        "unit": "IDR/kWh",
+        "currency": "IDR",
+        "basis": "ELECTRICITY_CONSUMPTION",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "general_worker_idr_day": {
+        "value": 175000,
+        "unit": "IDR/day",
+        "currency": "IDR",
+        "basis": "LABOR_DAY",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "foreman_idr_day": {
+        "value": 200000,
+        "unit": "IDR/day",
+        "currency": "IDR",
+        "basis": "LABOR_DAY",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "equipment_capex_idr": {
+        "value": 150000000,
+        "unit": "IDR",
+        "currency": "IDR",
+        "basis": "EQUIPMENT_CAPEX",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "equipment_life_years": {
+        "value": 8,
+        "unit": "year",
+        "currency": null,
+        "basis": "EQUIPMENT_LIFE",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "annual_operating_hours": {
+        "value": 2000,
+        "unit": "h/year",
+        "currency": null,
+        "basis": "OPERATIONS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "equipment_utilization_factor": {
+        "value": 0.7,
+        "unit": "fraction",
+        "currency": null,
+        "basis": "UTILIZATION",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "maintenance_pct_capex_per_year": {
+        "value": 0.05,
+        "unit": "%/year",
+        "currency": null,
+        "basis": "CAPEX",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "drying_energy_kwh_t": {
+        "value": 150,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "grinding_energy_kwh_t": {
+        "value": 40,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "classification_energy_kwh_t": {
+        "value": 5,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "process_loss_pct": {
+        "value": 5,
+        "unit": "%",
+        "currency": null,
+        "basis": "PROCESSING_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "transport_distance_km": {
+        "value": 25,
+        "unit": "km",
+        "currency": null,
+        "basis": "TRANSPORT",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "labor_hours_per_1000_blocks": {
+        "value": 10,
+        "unit": "h/1000_block",
+        "currency": null,
+        "basis": "1000_BLOCKS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "machine_hours_per_1000_blocks": {
+        "value": 3,
+        "unit": "h/1000_block",
+        "currency": null,
+        "basis": "1000_BLOCKS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "water_process_l_per_1000_blocks": {
+        "value": 150,
+        "unit": "L/1000_block",
+        "currency": null,
+        "basis": "1000_BLOCKS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "scenario_status": {
+        "value": "ASSUMPTION",
+        "unit": null,
+        "currency": null,
+        "basis": "SCENARIO",
+        "status": "ASSUMPTION"
+      }
+    },
+    "conservative_normalized": {
+      "cement_pc_idr_kg": {
+        "value": 1600,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "CEMENT MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "fine_sand_idr_kg": {
+        "value": 250,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "FINE_SAND_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "coarse_aggregate_idr_kg": {
+        "value": 250,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "COARSE_AGGREGATE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "water_idr_l": {
+        "value": 20,
+        "unit": "IDR/L",
+        "currency": "IDR",
+        "basis": "WATER_VOLUME",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "admixture_idr_kg": {
+        "value": 18000,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "ADMIXTURE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "residue_acquisition_idr_kg": {
+        "value": 100,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "transport_idr_ton_km": {
+        "value": 18000,
+        "unit": "IDR/t-km",
+        "currency": "IDR",
+        "basis": "TRANSPORT",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "electricity_idr_kwh": {
+        "value": 1700,
+        "unit": "IDR/kWh",
+        "currency": "IDR",
+        "basis": "ELECTRICITY_CONSUMPTION",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "general_worker_idr_day": {
+        "value": 200000,
+        "unit": "IDR/day",
+        "currency": "IDR",
+        "basis": "LABOR_DAY",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "drying_energy_kwh_t": {
+        "value": 250,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "grinding_energy_kwh_t": {
+        "value": 60,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "classification_energy_kwh_t": {
+        "value": 8,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "process_loss_pct": {
+        "value": 8,
+        "unit": "%",
+        "currency": null,
+        "basis": "PROCESSING_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "transport_distance_km": {
+        "value": 50,
+        "unit": "km",
+        "currency": null,
+        "basis": "TRANSPORT",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "labor_hours_per_1000_blocks": {
+        "value": 12,
+        "unit": "h/1000_block",
+        "currency": null,
+        "basis": "1000_BLOCKS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "machine_hours_per_1000_blocks": {
+        "value": 4,
+        "unit": "h/1000_block",
+        "currency": null,
+        "basis": "1000_BLOCKS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "scenario_status": {
+        "value": "ASSUMPTION",
+        "unit": null,
+        "currency": null,
+        "basis": "SCENARIO",
+        "status": "ASSUMPTION"
+      }
+    },
+    "optimistic_normalized": {
+      "cement_pc_idr_kg": {
+        "value": 1300,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "CEMENT MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "fine_sand_idr_kg": {
+        "value": 180,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "FINE_SAND_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "coarse_aggregate_idr_kg": {
+        "value": 180,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "COARSE_AGGREGATE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "water_idr_l": {
+        "value": 10,
+        "unit": "IDR/L",
+        "currency": "IDR",
+        "basis": "WATER_VOLUME",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "admixture_idr_kg": {
+        "value": 12000,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "ADMIXTURE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "residue_acquisition_idr_kg": {
+        "value": 0,
+        "unit": "IDR/kg",
+        "currency": "IDR",
+        "basis": "RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "transport_idr_ton_km": {
+        "value": 8000,
+        "unit": "IDR/t-km",
+        "currency": "IDR",
+        "basis": "TRANSPORT",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "electricity_idr_kwh": {
+        "value": 1000,
+        "unit": "IDR/kWh",
+        "currency": "IDR",
+        "basis": "ELECTRICITY_CONSUMPTION",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "general_worker_idr_day": {
+        "value": 160000,
+        "unit": "IDR/day",
+        "currency": "IDR",
+        "basis": "LABOR_DAY",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "drying_energy_kwh_t": {
+        "value": 100,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "grinding_energy_kwh_t": {
+        "value": 25,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "classification_energy_kwh_t": {
+        "value": 3,
+        "unit": "kWh/t",
+        "currency": null,
+        "basis": "PROCESSED_RESIDUE_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "process_loss_pct": {
+        "value": 3,
+        "unit": "%",
+        "currency": null,
+        "basis": "PROCESSING_MASS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "transport_distance_km": {
+        "value": 15,
+        "unit": "km",
+        "currency": null,
+        "basis": "TRANSPORT",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "labor_hours_per_1000_blocks": {
+        "value": 8,
+        "unit": "h/1000_block",
+        "currency": null,
+        "basis": "1000_BLOCKS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "machine_hours_per_1000_blocks": {
+        "value": 2,
+        "unit": "h/1000_block",
+        "currency": null,
+        "basis": "1000_BLOCKS",
+        "status": "ASSUMPTION",
+        "source_id": null
+      },
+      "scenario_status": {
+        "value": "ASSUMPTION",
+        "unit": null,
+        "currency": null,
+        "basis": "SCENARIO",
+        "status": "ASSUMPTION"
+      }
+    },
+    "input_contract": {
+      "required_fields": [
+        "value",
+        "unit",
+        "currency",
+        "basis",
+        "status"
+      ],
+      "status_policy": "FACTS MUST HAVE SOURCE_ID; SCENARIO VALUES ARE ASSUMPTIONS",
+      "scenario_names": [
+        "BASE",
+        "CONSERVATIVE",
+        "OPTIMISTIC"
+      ]
+    },
+    "paper_economic_screening": {
+      "estimate_class": "PRELIMINARY_ENGINEERING_ESTIMATE",
+      "full_tea_supported": false,
+      "source_id": "SRC-GEMASTE-2026",
+      "system_boundary": {
+        "included": [
+          "residue drying",
+          "grinding",
+          "sieving",
+          "internal transport",
+          "labor",
+          "maintenance",
+          "QC/sampling",
+          "basic residue-processing equipment CAPEX"
+        ],
+        "excluded": [
+          "mixer",
+          "paving-block press",
+          "molds",
+          "curing area",
+          "conveyor/pallet transfer",
+          "full plant civil works",
+          "full LCA",
+          "market development"
+        ],
+        "notes": [
+          "Paper cost model and the maturation pass explicitly identify the paving-block production line CAPEX as missing."
+        ]
+      },
+      "bridge": {
+        "cement_fraction_pct": 15,
+        "illustrative_substitution_window_pct": [
+          12,
+          30
+        ],
+        "formula": "residue_per_block = substitution_fraction × cement_fraction_in_block × mass_per_block",
+        "daily_formula": "residue_required_per_day = residue_per_block × block_per_day",
+        "status": "ILLUSTRATIVE_REQUIRES_VALIDATION"
+      },
+      "capex": {
+        "equipment_subtotal_idr": 240000000,
+        "installation_rate_pct": 15,
+        "installation_idr": 36000000,
+        "total_idr": 276000000,
+        "status": "PRELIMINARY_ENGINEERING_ESTIMATE",
+        "items": [
+          {
+            "name": "Dryer",
+            "cost_idr": 150000000
+          },
+          {
+            "name": "Grinder",
+            "cost_idr": 35000000
+          },
+          {
+            "name": "Sieve",
+            "cost_idr": 20000000
+          },
+          {
+            "name": "Material handling + hopper",
+            "cost_idr": 25000000
+          },
+          {
+            "name": "Weighing + basic QC",
+            "cost_idr": 10000000
+          }
+        ]
+      },
+      "opex": {
+        "reported_per_t_idr": 503000,
+        "components": [
+          {
+            "name": "Drying energy",
+            "value": 120000,
+            "unit": "IDR/t",
+            "status": "ASSUMPTION",
+            "driver": "80 kWh/t × 1,500 IDR/kWh"
+          },
+          {
+            "name": "Grinding energy",
+            "value": 52500,
+            "unit": "IDR/t",
+            "status": "ASSUMPTION",
+            "driver": "35 kWh/t × 1,500 IDR/kWh"
+          },
+          {
+            "name": "Sieving + handling",
+            "value": 20000,
+            "unit": "IDR/t",
+            "status": "ASSUMPTION",
+            "driver": "allowance"
+          },
+          {
+            "name": "Labor",
+            "value": 120000,
+            "unit": "IDR/t",
+            "status": "ASSUMPTION",
+            "driver": "process allocation"
+          },
+          {
+            "name": "Maintenance",
+            "value": 46000,
+            "unit": "IDR/day",
+            "status": "ASSUMPTION",
+            "driver": "5% CAPEX/year ÷ 300 operating days/year"
+          },
+          {
+            "name": "Water / cleaning",
+            "value": 20000,
+            "unit": "IDR/t",
+            "status": "ASSUMPTION",
+            "driver": "if needed"
+          },
+          {
+            "name": "Internal transport",
+            "value": 50000,
+            "unit": "IDR/t",
+            "status": "SCENARIO",
+            "driver": "10 km"
+          },
+          {
+            "name": "QC / sampling",
+            "value": 75000,
+            "unit": "IDR/t",
+            "status": "ASSUMPTION",
+            "driver": "initial allocation"
+          }
+        ]
+      },
+      "production": {
+        "residue_processing_capacity_t_per_day": 1,
+        "operating_days_per_month": 25,
+        "annual_operating_days": 300,
+        "processing_yield_pct": 90,
+        "finished_block_production_per_day": 5000,
+        "mass_per_block_kg": 2.64,
+        "area_per_block_m2": 0.02,
+        "blocks_per_m2": 50
+      },
+      "material_inputs": {
+        "cement_price_idr_per_kg": 1600,
+        "residue_acquisition_idr_per_kg": 0,
+        "sand_aggregate_price_placeholder_idr_per_kg": [
+          100,
+          250
+        ],
+        "sand_aggregate_placeholder_midpoint_idr_per_kg": 150
+      },
+      "scenarios": {
+        "conservative": {
+          "selling_price_per_m2": 70000,
+          "selling_price_per_block": 1400,
+          "production_cost_per_block": 1350,
+          "blocks_per_day": 5000,
+          "annual_operating_days": 300,
+          "capex_idr": 276000000
+        },
+        "base": {
+          "selling_price_per_m2": 80000,
+          "selling_price_per_block": 1600,
+          "production_cost_per_block": 1250,
+          "blocks_per_day": 5000,
+          "annual_operating_days": 300,
+          "capex_idr": 276000000
+        },
+        "optimistic": {
+          "selling_price_per_m2": 90000,
+          "selling_price_per_block": 1800,
+          "production_cost_per_block": 1150,
+          "blocks_per_day": 5000,
+          "annual_operating_days": 300,
+          "capex_idr": 276000000
+        }
+      },
+      "sensitivity": [
+        {
+          "parameter": "selling_price_per_m2",
+          "base": 80000,
+          "low": 70000,
+          "high": 90000,
+          "unit": "IDR/m²",
+          "direction": "↑ price → ↑ revenue"
+        },
+        {
+          "parameter": "production_cost_per_block",
+          "base": 1250,
+          "low": 1350,
+          "high": 1150,
+          "unit": "IDR/block",
+          "direction": "↑ cost → ↓ margin",
+          "label_note": "Low/high are scenario semantics, not numeric direction"
+        },
+        {
+          "parameter": "electricity_tariff_idr_kwh",
+          "base": 1500,
+          "low": 1200,
+          "high": 1800,
+          "unit": "IDR/kWh",
+          "direction": "↑ tariff → ↑ OPEX"
+        },
+        {
+          "parameter": "processing_cost_per_t",
+          "base": 503000,
+          "low_pct": -0.2,
+          "high_pct": 0.2,
+          "unit": "IDR/t",
+          "direction": "↑ cost → ↑ OPEX"
+        },
+        {
+          "parameter": "transport_distance_km",
+          "base": 10,
+          "low": 5,
+          "high": 20,
+          "unit": "km",
+          "direction": "↑ distance → ↑ OPEX"
+        },
+        {
+          "parameter": "processing_yield_pct",
+          "base": 90,
+          "low": 80,
+          "high": 95,
+          "unit": "%",
+          "direction": "↓ yield → ↑ residue requirement"
+        },
+        {
+          "parameter": "production_utilization_pct",
+          "base": 70,
+          "low": 50,
+          "high": 85,
+          "unit": "%",
+          "direction": "↑ utilization → ↑ annual output"
+        },
+        {
+          "parameter": "cement_replacement_pct",
+          "base": 20,
+          "low": 12,
+          "high": 30,
+          "unit": "%",
+          "direction": "↑ replacement → ↑ residue requirement / alters material cost"
+        },
+        {
+          "parameter": "cement_fraction_pct",
+          "base": 15,
+          "low": 12,
+          "high": 17,
+          "unit": "% of block mass",
+          "direction": "↑ cement fraction → ↑ residue requirement"
+        },
+        {
+          "parameter": "sand_aggregate_price_idr_kg",
+          "base": 150,
+          "low": 100,
+          "high": 250,
+          "unit": "IDR/kg",
+          "direction": "↑ aggregate price → ↑ cost/block"
+        },
+        {
+          "parameter": "block_line_capex_idr",
+          "base": null,
+          "low": null,
+          "high": null,
+          "unit": "IDR",
+          "direction": "needs vendor quotation"
+        }
+      ],
+      "financial_metrics": {
+        "supported": [
+          "revenue",
+          "production_cost",
+          "gross_operating_margin",
+          "operating_cash_flow",
+          "payback_period"
+        ],
+        "not_supported": [
+          "NPV",
+          "IRR",
+          "ROI",
+          "LCOE"
+        ]
+      },
+      "maturation": {
+        "level": 2,
+        "status": "PRELIMINARY_SCENARIO_POSITIVE_BIASED_HIGH",
+        "critical_gaps": [
+          "actual cement replacement fraction",
+          "actual sand/aggregate local price",
+          "block-production line CAPEX",
+          "actual energy/labor/maintenance billing",
+          "batch definition"
+        ],
+        "npv_irr_roi_disallowed": true
+      }
+    }
+  },
+  "environmental_assumptions": {
+    "cement_emission_factor_kgco2e_per_kg": 0.85,
+    "cement_emission_factor_low": 0.63,
+    "cement_emission_factor_high": 0.87,
+    "electricity_emission_factor_kgco2e_per_kwh": null,
+    "transport_emission_factor_kgco2e_per_ton_km": null,
+    "chemical_emission_factor_kgco2e_per_kg": null,
+    "cement_factor_status": "ASSUMPTION",
+    "factor_note": "0.85 kg CO2e/kg cement is a screening assumption aligned with the order of magnitude of published cement-emissions factors; replace with Indonesian/cement-specific verified LCA factor for final claim. World Bank historic CEM I reference is 866 kg CO2e/t cement; more recent Indonesian sector reporting cites 566 kg/t cement equivalent for Scope 1+2 in 2025, showing factor variability by system boundary.",
+    "cement_emission_factor_status": "ASSUMPTION",
+    "default_net_co2_claim_allowed": false,
+    "factors": [
+      {
+        "factor": "cement_emission_factor_kgco2e_per_kg",
+        "value": 0.85,
+        "unit": "kgCO2e/kg",
+        "source_id": null,
+        "year": null,
+        "geography": "GLOBAL/SCREENING",
+        "boundary": "PRELIMINARY_GATE_TO_GATE",
+        "scope": "SCREENING_REFERENCE",
+        "status": "ASSUMPTION"
+      },
+      {
+        "factor": "cement_emission_factor_low",
+        "value": 0.63,
+        "unit": "kgCO2e/kg",
+        "source_id": null,
+        "year": null,
+        "geography": "GLOBAL/SCREENING",
+        "boundary": "PRELIMINARY_GATE_TO_GATE",
+        "scope": "SCREENING_REFERENCE",
+        "status": "ASSUMPTION"
+      },
+      {
+        "factor": "cement_emission_factor_high",
+        "value": 0.87,
+        "unit": "kgCO2e/kg",
+        "source_id": null,
+        "year": null,
+        "geography": "GLOBAL/SCREENING",
+        "boundary": "PRELIMINARY_GATE_TO_GATE",
+        "scope": "SCREENING_REFERENCE",
+        "status": "ASSUMPTION"
+      },
+      {
+        "factor": "electricity_emission_factor_kgco2e_per_kwh",
+        "value": null,
+        "unit": "kgCO2e/kWh",
+        "source_id": null,
+        "year": null,
+        "geography": null,
+        "boundary": null,
+        "scope": "SCREENING",
+        "status": "DATA_REQUIRED"
+      },
+      {
+        "factor": "transport_emission_factor_kgco2e_per_ton_km",
+        "value": null,
+        "unit": "kgCO2e/t-km",
+        "source_id": null,
+        "year": null,
+        "geography": null,
+        "boundary": null,
+        "scope": "SCREENING",
+        "status": "DATA_REQUIRED"
+      },
+      {
+        "factor": "chemical_emission_factor_kgco2e_per_kg",
+        "value": null,
+        "unit": "kgCO2e/kg",
+        "source_id": null,
+        "year": null,
+        "geography": null,
+        "boundary": null,
+        "scope": "SCREENING",
+        "status": "DATA_REQUIRED"
+      }
+    ],
+    "scope": "PRELIMINARY_GATE_TO_GATE_SCREENING"
+  },
+  "formula_registry": [
+    {
+      "id": "FORM-001",
+      "name": "composition balance",
+      "formula": "sum(material_fractions)=100%",
+      "status": "CALCULATED",
+      "use": "mix validation"
+    },
+    {
+      "id": "FORM-002",
+      "name": "material mass per batch",
+      "formula": "material_mass = total_batch_mass * material_fraction",
+      "status": "CALCULATED",
+      "use": "mass balance"
+    },
+    {
+      "id": "FORM-003",
+      "name": "block volume",
+      "formula": "V = length * width * thickness",
+      "status": "CALCULATED",
+      "use": "geometry"
+    },
+    {
+      "id": "FORM-004",
+      "name": "block mass from density",
+      "formula": "m = V * density",
+      "status": "ASSUMPTION",
+      "use": "mass estimate",
+      "limitations": [
+        "ASSUMPTION_DEPENDS_ON_DENSITY"
+      ]
+    },
+    {
+      "id": "FORM-005",
+      "name": "material mass per block",
+      "formula": "m_i = m_block * fraction_i",
+      "status": "ASSUMPTION",
+      "use": "material calculator",
+      "limitations": [
+        "ASSUMPTION_DEPENDS_ON_BLOCK_MASS"
+      ]
+    },
+    {
+      "id": "FORM-006",
+      "name": "raw material cost",
+      "formula": "C_raw = sum(quantity_i * unit_price_i)",
+      "status": "CALCULATED",
+      "use": "TEA"
+    },
+    {
+      "id": "FORM-007",
+      "name": "processing energy",
+      "formula": "E_process = mass_t * (E_drying + E_grinding + E_classification + other)",
+      "status": "ASSUMPTION",
+      "use": "TEA",
+      "limitations": [
+        "ASSUMPTION_UNTIL_MEASURED"
+      ]
+    },
+    {
+      "id": "FORM-008",
+      "name": "energy cost",
+      "formula": "C_energy = E_process_kWh * electricity_price",
+      "status": "CALCULATED",
+      "use": "TEA"
+    },
+    {
+      "id": "FORM-009",
+      "name": "transport cost",
+      "formula": "C_transport = transported_mass_t * distance_km * rate_idr_ton_km",
+      "status": "ASSUMPTION",
+      "use": "TEA",
+      "limitations": [
+        "ASSUMPTION_UNTIL_LOCAL_RATE"
+      ]
+    },
+    {
+      "id": "FORM-010",
+      "name": "total production cost",
+      "formula": "C_total = raw + processing + energy + labor + transport + equipment + maintenance + other",
+      "status": "CALCULATED",
+      "use": "TEA"
+    },
+    {
+      "id": "FORM-011",
+      "name": "cement avoided mass",
+      "formula": "cement_control - cement_candidate",
+      "status": "CALCULATED",
+      "use": "environmental screening"
+    },
+    {
+      "id": "FORM-012",
+      "name": "screening cement-related CO2 avoidance",
+      "formula": "avoided_CO2 = cement_avoided_mass * cement_emission_factor",
+      "status": "CALCULATED",
+      "use": "environmental screening",
+      "limitations": [
+        "SCREENING_ONLY"
+      ]
+    },
+    {
+      "id": "FORM-013",
+      "name": "net screening CO2 benefit",
+      "formula": "net_CO2 = avoided_CO2 - process_CO2 - transport_CO2 - chemical_CO2",
+      "status": "VALIDATION_REQUIRED",
+      "use": "environmental screening"
+    },
+    {
+      "id": "FORM-014",
+      "name": "SNI strength check",
+      "formula": "pass_if_actual_strength_meets_avg_and_min_requirement_of_selected_class",
+      "use": "SNI gate",
+      "logic_type": "NORMATIVE"
+    },
+    {
+      "id": "FORM-015",
+      "name": "overall evidence state",
+      "formula": "derived from source type + directness + application match + validation state",
+      "use": "DSS",
+      "logic_type": "RULE_BASED"
+    }
+  ],
+  "dss_rules": [
+    {
+      "id": "DSS-001",
+      "condition": "required_material_characterization_missing",
+      "output": "DATA_REQUIRED"
+    },
+    {
+      "id": "DSS-002",
+      "condition": "candidate_outside_supported_evidence_range",
+      "output": "DATA_REQUIRED"
+    },
+    {
+      "id": "DSS-003",
+      "condition": "paving_block_test_data_missing",
+      "output": "DATA_REQUIRED"
+    },
+    {
+      "id": "DSS-004",
+      "condition": "any_required_SNI_parameter_missing",
+      "output": "DATA_REQUIRED"
+    },
+    {
+      "id": "DSS-005",
+      "condition": "all_required_SNI_parameters_pass_and_test_data_is_actual",
+      "output": "CONDITIONAL"
+    },
+    {
+      "id": "DSS-006",
+      "condition": "economic_inputs_missing",
+      "output": "DATA_REQUIRED"
+    },
+    {
+      "id": "DSS-007",
+      "condition": "environmental_factors_missing",
+      "output": "DATA_REQUIRED"
+    },
+    {
+      "id": "DSS-008",
+      "condition": "literature_only_and_no_SILICA2CON_test",
+      "output": "CONDITIONAL"
+    },
+    {
+      "id": "DSS-009",
+      "condition": "technical_fail",
+      "output": "NOT_SUPPORTED"
+    },
+    {
+      "id": "DSS-010",
+      "condition": "technical_pass_and_economic_or_environmental_is_conditional",
+      "output": "CONDITIONAL"
+    },
+    {
+      "id": "DSS-011",
+      "condition": "technical_pass_and_economic_pass_and_environmental_pass_and_evidence_validated",
+      "output": "VALIDATED"
+    }
+  ],
+  "decision_status": [
+    {
+      "meaning": "Relevant evidence or material qualification is insufficient for a defensible application decision.",
+      "claim_allowed": "Do not recommend the current scenario.",
+      "decision": "NOT_SUPPORTED"
+    },
+    {
+      "meaning": "Application may be relevant, but one or more critical inputs/measurements are missing.",
+      "claim_allowed": "Request the missing data.",
+      "decision": "DATA_REQUIRED"
+    },
+    {
+      "meaning": "Relevant evidence exists, but validation or one or more gates remain incomplete.",
+      "claim_allowed": "Proceed to targeted validation.",
+      "decision": "CONDITIONAL"
+    },
+    {
+      "meaning": "Direct/strong evidence and required screening gates are supportive, but SILICA2CON validation is incomplete.",
+      "claim_allowed": "Promising for experimental validation; not validated.",
+      "decision": "PRELIMINARY_PROMISING"
+    },
+    {
+      "meaning": "Actual SILICA2CON validation protocol has been satisfied with experimental data.",
+      "claim_allowed": "Validated within the defined scope; not regulatory certification by itself.",
+      "decision": "VALIDATED"
+    }
+  ],
+  "validation_roadmap": [
+    {
+      "phase": 1,
+      "name": "Material characterization",
+      "required_outputs": [
+        "XRF",
+        "XRD",
+        "moisture",
+        "PSD",
+        "bulk density",
+        "safety/leaching as required"
+      ],
+      "roadmap_status": "PLANNED"
+    },
+    {
+      "phase": 2,
+      "name": "Pre-processing study",
+      "required_outputs": [
+        "mass loss",
+        "energy",
+        "particle size",
+        "process yield"
+      ],
+      "roadmap_status": "PLANNED"
+    },
+    {
+      "phase": 3,
+      "name": "Candidate mix matrix",
+      "required_outputs": [
+        "control",
+        "candidate replacement levels",
+        "replicates"
+      ],
+      "roadmap_status": "PLANNED"
+    },
+    {
+      "phase": 4,
+      "name": "Paving-block testing",
+      "required_outputs": [
+        "compressive strength",
+        "water absorption",
+        "abrasion",
+        "appearance/dimensions",
+        "sulfate test as relevant"
+      ],
+      "roadmap_status": "VALIDATION_REQUIRED"
+    },
+    {
+      "phase": 5,
+      "name": "Model calibration",
+      "required_outputs": [
+        "validated empirical model if dataset sufficient",
+        "cross-validation",
+        "error metrics"
+      ],
+      "roadmap_status": "PLANNED"
+    },
+    {
+      "phase": 6,
+      "name": "TEA/LCA update",
+      "required_outputs": [
+        "local prices",
+        "measured energy",
+        "transport",
+        "emission factors"
+      ],
+      "roadmap_status": "PLANNED"
+    },
+    {
+      "phase": 7,
+      "name": "Prototype/pilot",
+      "required_outputs": [
+        "production consistency",
+        "quality control",
+        "field performance"
+      ],
+      "roadmap_status": "PLANNED"
+    }
+  ],
+  "forbidden_demo_outputs": [
+    {
+      "value": 26.5,
+      "unit": "MPa",
+      "reason": "illustrative only; must not be displayed as SILICA2CON result",
+      "display_policy": "HIDDEN_FROM_UI"
+    },
+    {
+      "value": 8.4,
+      "unit": "% absorption",
+      "reason": "illustrative only; must not be displayed as SILICA2CON result",
+      "display_policy": "HIDDEN_FROM_UI"
+    },
+    {
+      "value": 87.3,
+      "unit": "score",
+      "reason": "toy/example score; not validated DSS output",
+      "display_policy": "HIDDEN_FROM_UI"
+    }
+  ],
+  "audit_summary": {
+    "proven": [
+      "Dieng geothermal silica behavior is documented",
+      "geothermal sludge generation is reported",
+      "specific Dieng silica scaling samples show high silica content and an SAI result",
+      "geothermal sludge and geothermal nano-SiO2 waste have been studied in cementitious contexts",
+      "SNI 03-0691-1996 provides paving-block requirements"
+    ],
+    "estimated": [
+      "geometry demo",
+      "density demo",
+      "2026 TEA baseline prices except where directly sourced",
+      "processing-energy assumptions",
+      "screening cement emission factor"
+    ],
+    "unknown": [
+      "SILICA2CON paving-block strength",
+      "SILICA2CON water absorption",
+      "SILICA2CON abrasion",
+      "actual local processing cost",
+      "net CO2 reduction",
+      "validated strength prediction",
+      "universal optimum replacement"
+    ],
+    "critical_next_data": [
+      "actual sample characterization",
+      "paving-block experimental dataset",
+      "local processing energy",
+      "local quotations",
+      "validated environmental factors"
+    ]
+  },
+  "direct_paving_evidence": [
+    {
+      "id": "PAV-001",
+      "source_id": "SRC-017",
+      "material": "Geodipa waste",
+      "product": "paving block",
+      "replacement_basis": "CEMENT MASS",
+      "replacement_values_pct": [
+        0,
+        3,
+        5,
+        8,
+        10,
+        12
+      ],
+      "mix": "1 PC : 6 sand",
+      "water": "100 mL/block",
+      "dimensions_mm": "200x100x60",
+      "production": "manual",
+      "replicates_per_mix": 3,
+      "test_age_days": 7,
+      "status": "REPORTED",
+      "control_included": true,
+      "evidence_class": "DIRECT",
+      "source_type": "LITERATURE",
+      "product_type": "PAVING_BLOCK",
+      "testing_age": "7 days",
+      "limitations": [
+        "Not SILICA2CON experiment; 28-day/SNI completeness not established."
+      ]
+    }
+  ],
+  "audit_updates": [
+    {
+      "id": "AUD-001",
+      "type": "CORRECTION",
+      "target": "SRC-006 performance values",
+      "action": "Meiyati compressive strength stored in original kgf/cm2; derived MPa added as calculated."
+    },
+    {
+      "id": "AUD-002",
+      "type": "ADD",
+      "target": "SRC-017",
+      "action": "Added Fikroni et al. 2023 direct paving-block literature evidence under canonical source SRC-017."
+    },
+    {
+      "id": "AUD-003",
+      "type": "POLICY",
+      "target": "20% replacement",
+      "action": "20% is exploratory unless supported by directly comparable paving evidence."
+    },
+    {
+      "id": "AUD-004",
+      "type": "POLICY",
+      "target": "Geometry",
+      "action": "Default geometry is illustrative and disabled for validated calculations."
+    },
+    {
+      "date": "2026-08-26",
+      "type": "PHASE_3B_NORMALIZATION",
+      "summary": "Canonicalized statuses/evidence classes, normalized SNI requirements, TEA scenario metadata, environmental factor statuses, formulation replacement basis, and provenance gating."
+    },
+    {
+      "date": "2026-08-26",
+      "type": "PROVENANCE_CORRECTION",
+      "target": "Fikroni direct paving literature",
+      "summary": "Corrected Fikroni evidence source linkage from an incorrect BPS source ID to canonical SRC-017 for the peer-reviewed paving-block paper."
+    }
+  ],
+  "simulation_defaults": {
+    "residue_pct": {
+      "value": 8,
+      "unit": "%",
+      "currency": null,
+      "basis": "CEMENT MASS",
+      "status": "ASSUMPTION",
+      "source_id": null
+    },
+    "cement_kg": {
+      "value": 50,
+      "unit": "kg/batch",
+      "currency": null,
+      "basis": "BATCH",
+      "status": "ASSUMPTION",
+      "source_id": null
+    },
+    "aggregate_kg": {
+      "value": 300,
+      "unit": "kg/batch",
+      "currency": null,
+      "basis": "BATCH",
+      "status": "ASSUMPTION",
+      "source_id": null
+    },
+    "water_kg": {
+      "value": 30,
+      "unit": "kg/batch",
+      "currency": null,
+      "basis": "BATCH",
+      "status": "ASSUMPTION",
+      "source_id": null
+    },
+    "admixture_kg": {
+      "value": 0,
+      "unit": "kg/batch",
+      "currency": null,
+      "basis": "BATCH",
+      "status": "ASSUMPTION",
+      "source_id": null
+    },
+    "batch_blocks": {
+      "value": 100,
+      "unit": "block",
+      "currency": null,
+      "basis": "BATCH",
+      "status": "ASSUMPTION",
+      "source_id": null
+    },
+    "target_class": {
+      "value": "C",
+      "unit": null,
+      "currency": null,
+      "basis": "SNI_CLASS",
+      "status": "ASSUMPTION",
+      "source_id": null
+    }
+  }
+}

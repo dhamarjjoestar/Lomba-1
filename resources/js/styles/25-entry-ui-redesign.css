@@ -1,0 +1,38 @@
+
+/* =========================================================
+   ENTRY REDESIGN PATCH V1.1 — preserve landing CTA clearance
+   Prevent workflow spine from covering the study entry buttons.
+   ========================================================= */
+@media (min-width: 901px) {
+  .landing-main {
+    position: relative !important;
+    z-index: 20 !important;
+  }
+
+  .landing-actions {
+    position: relative !important;
+    z-index: 30 !important;
+  }
+
+  .landing-workflow {
+    position: relative !important;
+    z-index: 12 !important;
+    transform: translateY(58px) !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .landing-workflow {
+    transform: translateY(44px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-main,
+  .landing-actions,
+  .landing-workflow {
+    position: relative !important;
+    z-index: auto !important;
+    transform: none !important;
+  }
+}

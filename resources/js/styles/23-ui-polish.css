@@ -1,0 +1,283 @@
+/* =========================================================
+   SILICA2CON — Final UI polish
+   Focus: usable density, scientific hierarchy, feedback, and
+   stable desktop sidebar behavior. Logic is intentionally untouched.
+   ========================================================= */
+
+:root {
+  --ui-content-max: 1520px;
+  --ui-radius-lg: 18px;
+  --ui-radius-md: 14px;
+  --ui-line: #ddd9cf;
+  --ui-green: #173d2f;
+  --ui-green-2: #2b684d;
+  --ui-muted: #728078;
+  --ui-paper: #fffdf8;
+}
+
+/* More useful canvas density on the pages that looked undersized. */
+.main-content {
+  width: min(var(--ui-content-max), 100%);
+  padding: 30px 38px 72px;
+}
+
+.page-head h2 {
+  font-size: clamp(31px, 3.8vw, 48px);
+}
+
+.page-description {
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.panel {
+  border-radius: var(--ui-radius-lg);
+}
+
+/* ---------------------------------------------------------
+   DOE — readable matrix instead of a dense text wall
+   --------------------------------------------------------- */
+.doe-plan-card {
+  margin-top: 22px;
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.doe-plan-head h3 { font-size: 24px; }
+.doe-plan-head p { max-width: 840px; font-size: 11.5px; }
+.doe-factor-grid { gap: 14px; margin-top: 18px; }
+.doe-factor { padding: 16px; border-radius: 13px; }
+.doe-factor-top strong { font-size: 14px; }
+.doe-levels { gap: 8px; margin-top: 12px; }
+.doe-level { min-height: 68px; display: flex; flex-direction: column; justify-content: center; padding: 10px; border: 1px solid #e5ebe6; }
+.doe-level strong { font-size: 13px; }
+.doe-factor small { font-size: 9.5px; }
+.doe-response-grid { gap: 10px; margin-top: 14px; }
+.doe-response-grid > div { min-height: 72px; padding: 12px 13px; }
+.doe-response-grid strong { font-size: 13px; }
+.doe-model-strip { padding: 13px; }
+.doe-model-strip strong { font-size: 12px; }
+.doe-runs-table { margin-top: 11px; }
+.doe-run-row { min-height: 42px; padding: 0 13px; font-size: 10px; }
+.doe-notes { padding: 12px 13px; }
+.doe-notes p { font-size: 9.5px; }
+
+/* ---------------------------------------------------------
+   Economics — controls are prominent and results visibly react
+   --------------------------------------------------------- */
+.economics-premium { gap: 18px !important; }
+.economics-control-grid { gap: 12px; align-items: stretch; }
+.economics-control-grid > * { min-height: 100%; }
+.economics-control-grid .field { padding: 12px; border: 1px solid #e2ddd2; border-radius: 12px; background: #fffdf8; }
+.economics-control-grid .field-label { font-size: 9px; }
+.economics-control-grid input { min-height: 45px; font-size: 13px; }
+.economics-control-grid .range-field { padding: 12px; border: 1px solid #e2ddd2; border-radius: 12px; background: #fffdf8; }
+.economics-control-grid .range-field .range-head { margin-bottom: 9px; }
+.economics-control-grid .range-field input[type="range"] { min-height: 10px; }
+.economics-control-grid .range-field .field-label { font-size: 9px; }
+
+.economics-control-impact {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.economics-control-impact > div {
+  padding: 13px;
+  border: 1px solid #dce4df;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f0f6f1, #fffdf8);
+}
+
+.economics-control-impact span {
+  display: block;
+  color: #7b897f;
+  font: 800 7px var(--app-font-mono);
+  letter-spacing: .08em;
+}
+
+.economics-control-impact strong {
+  display: block;
+  margin-top: 7px;
+  color: #2d624c;
+  font: 800 19px var(--app-font-serif);
+}
+
+.economics-control-impact small {
+  display: block;
+  margin-top: 4px;
+  color: #7c8982;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Decision — summary first, detail second
+   --------------------------------------------------------- */
+.decision-study-summary,
+.decision-assumption-answer {
+  padding: 20px 22px;
+  border: 1px solid var(--ui-line);
+  border-radius: 17px;
+  background: var(--ui-paper);
+}
+
+.decision-study-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.decision-study-grid article {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #e3e4de;
+  border-radius: 11px;
+  background: #fbfcf9;
+}
+
+.decision-study-grid article span,
+.decision-assumption-points article span {
+  display: block;
+  color: #7f8a83;
+  font: 800 7px var(--app-font-mono);
+  letter-spacing: .08em;
+}
+
+.decision-study-grid article strong {
+  display: block;
+  margin-top: 6px;
+  color: #2d5544;
+  font: 800 15px var(--app-font-serif);
+  line-height: 1.12;
+}
+
+.decision-study-grid article small {
+  display: block;
+  margin-top: 5px;
+  color: #7a8880;
+  font-size: 8.5px;
+  line-height: 1.45;
+}
+
+.decision-assumption-answer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr);
+  gap: 18px;
+  background: linear-gradient(135deg, #f1f6f1, #fffdf8);
+}
+
+.decision-assumption-answer h3 {
+  margin: 5px 0 7px;
+  color: var(--ui-green);
+  font: 800 23px var(--app-font-serif);
+}
+
+.decision-assumption-answer p {
+  max-width: 760px;
+  margin: 0;
+  color: #697a70;
+  font-size: 10.5px;
+  line-height: 1.6;
+}
+
+.decision-assumption-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.decision-assumption-points > div {
+  padding: 12px;
+  border: 1px solid #d9e3db;
+  border-radius: 11px;
+  background: rgba(255,255,255,.7);
+}
+
+.decision-assumption-points > div > span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: #e6f1e8;
+  color: #2d6d4c;
+  font: 800 9px var(--app-font-mono);
+}
+
+.decision-assumption-points strong {
+  display: block;
+  margin-top: 8px;
+  color: #355848;
+  font-size: 10px;
+}
+
+.decision-assumption-points small {
+  display: block;
+  margin-top: 2px;
+  color: #76857d;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Evidence source cards — larger reading surface
+   --------------------------------------------------------- */
+.evidence-page .evidence-layout,
+.evidence-page .evidence-engine-columns { gap: 18px; }
+.evidence-page .source-card.evidence-source-card { padding: 18px; gap: 14px; min-height: 165px; }
+.evidence-page .evidence-source-title { font-size: 16px !important; line-height: 1.35; }
+.evidence-page .evidence-source-authors { font-size: 11px !important; line-height: 1.5; }
+.evidence-page .evidence-source-meta { margin-top: 9px; font-size: 10px; flex-wrap: wrap; row-gap: 5px; }
+.evidence-page .detail-list > div { padding: 11px 0; font-size: 10.5px; }
+.evidence-page .evidence-engine-list > div { padding: 11px 0; }
+
+/* ---------------------------------------------------------
+   Data gaps + permanent desktop sidebar
+   --------------------------------------------------------- */
+@media (min-width: 821px) {
+  .sidebar {
+    position: sticky !important;
+    top: 0 !important;
+    align-self: start !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  .sidebar-inner {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  .stage-nav {
+    min-height: 0;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+}
+
+.gap-control-room .gap-command-bar { padding: 18px 20px; }
+.gap-control-room .gap-control-card { padding: 19px; min-height: 295px; }
+.gap-control-room .gap-control-card h3 { font-size: 18px; }
+.gap-control-room .gap-detail p { font-size: 10px; line-height: 1.55; }
+
+@media (max-width: 1100px) {
+  .decision-study-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .decision-assumption-answer { grid-template-columns: 1fr; }
+  .economics-control-impact { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 900px) {
+  .main-content { padding: 24px 22px 56px; }
+}
+
+@media (max-width: 680px) {
+  .main-content { padding: 20px 15px 46px; }
+  .decision-study-grid,
+  .decision-assumption-points,
+  .economics-control-impact { grid-template-columns: 1fr; }
+  .doe-factor-grid { grid-template-columns: 1fr; }
+}

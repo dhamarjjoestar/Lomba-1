@@ -1,0 +1,633 @@
+
+/* =========================================================
+   SILICA2CON — VALIDATION ROADMAP REDESIGN V2
+   Matched to ValidationPage.tsx
+   UI / layout only. No engine changes.
+   ========================================================= */
+
+.validation-roadmap {
+  --vr-ink: #17382d;
+  --vr-ink-2: #3f5b50;
+  --vr-muted: #74827b;
+  --vr-line: #dfe7e2;
+  --vr-soft: #f5f8f6;
+  --vr-paper: #fffefb;
+  --vr-green: #2b654d;
+  --vr-green-soft: #edf5ef;
+  --vr-gold: #ad8235;
+  --vr-gold-soft: #f7f0e2;
+  --vr-shadow: 0 8px 26px rgba(23, 56, 45, 0.05);
+  width: 100%;
+  color: var(--vr-ink);
+}
+
+/* ---------- HEAD ---------- */
+
+.validation-roadmap .page-head {
+  margin-bottom: 18px;
+}
+
+.validation-roadmap .page-head h2 {
+  max-width: 940px;
+  margin: 0;
+  color: var(--vr-ink);
+  font-size: clamp(32px, 3.25vw, 46px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.validation-roadmap .page-description {
+  max-width: 920px;
+  margin-top: 8px;
+  color: var(--vr-muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* ---------- COMMAND / ACTIVE STUDY ---------- */
+
+.validation-roadmap .roadmap-command {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--vr-line);
+  border-radius: 15px;
+  background: var(--vr-paper);
+  box-shadow: var(--vr-shadow);
+}
+
+.validation-roadmap .validation-active-study {
+  border-color: #d6e4db;
+  background: linear-gradient(
+    135deg,
+    rgba(238, 247, 241, 0.96),
+    #fffefb 68%
+  );
+}
+
+.validation-roadmap .roadmap-command-main {
+  min-width: 0;
+}
+
+.validation-roadmap .roadmap-command-main h3 {
+  margin: 5px 0 6px;
+  color: var(--vr-ink);
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.validation-roadmap .roadmap-command-main p {
+  max-width: 820px;
+  margin: 0;
+  color: var(--vr-muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.validation-roadmap .roadmap-command-status {
+  min-width: 0;
+  align-self: center;
+  padding-left: 18px;
+  border-left: 1px solid var(--vr-line);
+}
+
+.validation-roadmap .roadmap-command-status span,
+.validation-roadmap .roadmap-command-status strong,
+.validation-roadmap .roadmap-command-status small {
+  display: block;
+}
+
+.validation-roadmap .roadmap-command-status span {
+  color: #77857e;
+  font: 800 7px/1.2 var(--app-font-mono);
+  letter-spacing: .09em;
+}
+
+.validation-roadmap .roadmap-command-status strong {
+  margin-top: 6px;
+  color: var(--vr-ink);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.validation-roadmap .roadmap-command-status small {
+  margin-top: 5px;
+  color: var(--vr-muted);
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+/* ---------- FLOW ---------- */
+
+.validation-roadmap .roadmap-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Milestones */
+.validation-roadmap .roadmap-milestone {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--vr-line);
+  border-radius: 15px;
+  background: var(--vr-paper);
+  box-shadow: var(--vr-shadow);
+}
+
+.validation-roadmap .roadmap-milestone-index {
+  display: grid;
+  place-items: start center;
+  padding-top: 18px;
+  border-right: 1px solid var(--vr-line);
+  color: #4c6c5c;
+  background: #f0f6f2;
+  font: 800 10px/1 var(--app-font-mono);
+}
+
+.validation-roadmap .roadmap-gold .roadmap-milestone-index {
+  color: #896c36;
+  background: var(--vr-gold-soft);
+}
+
+.validation-roadmap .roadmap-milestone-body {
+  min-width: 0;
+  padding: 18px 19px 17px;
+}
+
+.validation-roadmap .roadmap-milestone-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.validation-roadmap .roadmap-milestone-head h3,
+.validation-roadmap .roadmap-gap-panel h3,
+.validation-roadmap .roadmap-experiment-panel h3,
+.validation-roadmap .roadmap-gate-panel h3,
+.validation-roadmap .roadmap-scale-panel h3 {
+  margin: 5px 0 6px;
+  color: var(--vr-ink);
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.validation-roadmap .roadmap-milestone-head p,
+.validation-roadmap .roadmap-gap-panel p,
+.validation-roadmap .roadmap-experiment-panel p,
+.validation-roadmap .roadmap-gate-panel p,
+.validation-roadmap .roadmap-scale-panel p {
+  max-width: 880px;
+  margin: 0;
+  color: var(--vr-muted);
+  font-size: 9.5px;
+  line-height: 1.6;
+}
+
+.validation-roadmap .roadmap-stage-tag,
+.validation-roadmap .roadmap-experiment-badge {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  padding: 6px 8px;
+  border: 1px solid #dfe7e2;
+  border-radius: 7px;
+  color: #5d7168;
+  background: #f3f7f4;
+  font: 800 6.5px/1.1 var(--app-font-mono);
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+.validation-roadmap .roadmap-gold .roadmap-stage-tag {
+  border-color: #eadfca;
+  color: #7b6436;
+  background: #faf4e8;
+}
+
+.validation-roadmap .roadmap-source-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 11px;
+  border-top: 1px solid #e8eeea;
+}
+
+.validation-roadmap .roadmap-source-heading span {
+  color: #7b8881;
+  font: 800 7px/1.2 var(--app-font-mono);
+  letter-spacing: .08em;
+}
+
+.validation-roadmap .roadmap-source-heading strong {
+  color: #4c6759;
+  font: 800 8px/1.2 var(--app-font-mono);
+}
+
+.validation-roadmap .roadmap-source-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.validation-roadmap .roadmap-source-card {
+  min-width: 0;
+  min-height: 142px;
+  display: flex;
+  flex-direction: column;
+  padding: 11px;
+  border: 1px solid #e1e8e4;
+  border-radius: 10px;
+  background: #fbfcfb;
+}
+
+.validation-roadmap .roadmap-source-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.validation-roadmap .roadmap-source-year,
+.validation-roadmap .roadmap-source-type {
+  color: #78867f;
+  font: 800 6.5px/1.1 var(--app-font-mono);
+}
+
+.validation-roadmap .roadmap-source-type {
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: #eef4ef;
+}
+
+.validation-roadmap .roadmap-source-card h4 {
+  margin: 9px 0 0;
+  color: #214b3a;
+  font-size: 9px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.validation-roadmap .roadmap-source-authors,
+.validation-roadmap .roadmap-source-journal {
+  margin: 5px 0 0;
+  color: #718078;
+  font-size: 7px;
+  line-height: 1.45;
+}
+
+.validation-roadmap .roadmap-source-journal {
+  margin-top: 3px;
+}
+
+.validation-roadmap .roadmap-source-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 7px;
+}
+
+.validation-roadmap .roadmap-source-bottom code {
+  min-width: 0;
+  color: #66756e;
+  font: 600 6px/1.35 var(--app-font-mono);
+  overflow-wrap: anywhere;
+}
+
+.validation-roadmap .roadmap-source-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  color: #32634f;
+  font-size: 6.8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ---------- CONNECTORS ---------- */
+
+.validation-roadmap .roadmap-connector {
+  position: relative;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  color: #788980;
+}
+
+.validation-roadmap .roadmap-connector span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #dce5df;
+}
+
+.validation-roadmap .roadmap-connector svg {
+  position: relative;
+  z-index: 1;
+  padding: 3px;
+  border: 1px solid #dce5df;
+  border-radius: 50%;
+  color: #718179;
+  background: #fffefb;
+}
+
+/* Ignore accidental empty connector from old JSX */
+.validation-roadmap .roadmap-connector:empty {
+  display: none;
+}
+
+/* ---------- GAP ---------- */
+
+.validation-roadmap .roadmap-gap-panel {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 17px 19px;
+  border: 1px solid #e5dcc9;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fffaf0, #fffefb);
+}
+
+.validation-roadmap .roadmap-gap-mark {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ead9b7;
+  border-radius: 13px;
+  color: #856c38;
+  background: #fbf2df;
+  font: 800 9px/1 var(--app-font-mono);
+}
+
+.validation-roadmap .roadmap-gap-panel h3 {
+  font-size: 17px;
+}
+
+/* ---------- EXPERIMENT ---------- */
+
+.validation-roadmap .roadmap-experiment-panel,
+.validation-roadmap .roadmap-gate-panel,
+.validation-roadmap .roadmap-scale-panel {
+  padding: 18px 19px;
+  border: 1px solid var(--vr-line);
+  border-radius: 15px;
+  background: var(--vr-paper);
+  box-shadow: var(--vr-shadow);
+}
+
+.validation-roadmap .roadmap-experiment-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.validation-roadmap .roadmap-experiment-badge {
+  color: #856a35;
+  border-color: #ead9b7;
+  background: #fbf2df;
+}
+
+.validation-roadmap .roadmap-experiment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.validation-roadmap .roadmap-experiment-grid > div {
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #e1e8e4;
+  border-radius: 10px;
+  background: #fbfcfb;
+}
+
+.validation-roadmap .roadmap-experiment-grid > div > span {
+  color: #75837c;
+  font: 800 7px/1 var(--app-font-mono);
+}
+
+.validation-roadmap .roadmap-experiment-grid strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--vr-ink);
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.validation-roadmap .roadmap-experiment-grid p {
+  margin: 6px 0 0;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.validation-roadmap .roadmap-experiment-grid small {
+  display: block;
+  margin-top: 9px;
+  padding-top: 7px;
+  border-top: 1px solid #e8eeea;
+  color: #687970;
+  font: 800 6.2px/1.4 var(--app-font-mono);
+}
+
+/* ---------- GATE ---------- */
+
+.validation-roadmap .roadmap-gate-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 18px;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f9f6, #fffefb);
+}
+
+.validation-roadmap .roadmap-gate-status {
+  padding: 13px 15px;
+  border-left: 1px solid var(--vr-line);
+}
+
+.validation-roadmap .roadmap-gate-status span,
+.validation-roadmap .roadmap-gate-status strong {
+  display: block;
+}
+
+.validation-roadmap .roadmap-gate-status span {
+  color: #78867f;
+  font: 800 7px/1.2 var(--app-font-mono);
+  letter-spacing: .08em;
+}
+
+.validation-roadmap .roadmap-gate-status strong {
+  margin-top: 6px;
+  color: #345b49;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+/* ---------- SCALE ---------- */
+
+.validation-roadmap .roadmap-scale-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.validation-roadmap .roadmap-scale-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(110px, 1fr));
+  gap: 6px;
+}
+
+.validation-roadmap .roadmap-scale-grid span {
+  padding: 9px 10px;
+  border: 1px solid #dde6e0;
+  border-radius: 8px;
+  color: #557066;
+  background: #f4f8f5;
+  font: 800 7px/1.1 var(--app-font-mono);
+  text-align: center;
+}
+
+/* ---------- NOTE + ACTION ---------- */
+
+.validation-roadmap .roadmap-literature-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 12px;
+  padding: 11px 13px;
+  border: 1px solid #e0e7e2;
+  border-radius: 11px;
+  background: #f7faf8;
+}
+
+.validation-roadmap .roadmap-literature-note > svg {
+  flex: 0 0 auto;
+  color: var(--vr-green);
+}
+
+.validation-roadmap .roadmap-literature-note strong {
+  color: var(--vr-ink);
+  font-size: 9px;
+}
+
+.validation-roadmap .roadmap-literature-note p {
+  margin: 4px 0 0;
+  color: var(--vr-muted);
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.validation-roadmap .page-actions {
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid var(--vr-line);
+}
+
+.validation-roadmap .page-actions .button {
+  min-height: 39px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1100px) {
+  .validation-roadmap .roadmap-source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .validation-roadmap .roadmap-experiment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .validation-roadmap .roadmap-gate-panel,
+  .validation-roadmap .roadmap-scale-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .validation-roadmap .roadmap-gate-status {
+    padding: 12px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--vr-line);
+  }
+}
+
+@media (max-width: 820px) {
+  .validation-roadmap .roadmap-command {
+    grid-template-columns: 1fr;
+  }
+
+  .validation-roadmap .roadmap-command-status {
+    padding: 11px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--vr-line);
+  }
+
+  .validation-roadmap .roadmap-source-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .validation-roadmap .roadmap-experiment-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .validation-roadmap .roadmap-scale-grid {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .validation-roadmap .page-head h2 {
+    font-size: 29px;
+  }
+
+  .validation-roadmap .roadmap-milestone {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .validation-roadmap .roadmap-milestone-body,
+  .validation-roadmap .roadmap-experiment-panel,
+  .validation-roadmap .roadmap-gate-panel,
+  .validation-roadmap .roadmap-scale-panel {
+    padding: 15px;
+  }
+
+  .validation-roadmap .roadmap-milestone-head,
+  .validation-roadmap .roadmap-experiment-head {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .validation-roadmap .roadmap-source-grid,
+  .validation-roadmap .roadmap-experiment-grid,
+  .validation-roadmap .roadmap-scale-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .validation-roadmap .roadmap-gap-panel {
+    grid-template-columns: 48px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .validation-roadmap .roadmap-gap-mark {
+    width: 48px;
+    height: 48px;
+  }
+}

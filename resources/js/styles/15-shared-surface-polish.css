@@ -1,0 +1,197 @@
+/* =========================================================
+   GLOBAL SURFACE
+   ========================================================= */
+
+body {
+  background: var(--silica-paper);
+  color: var(--silica-text);
+}
+
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.panel {
+  background: var(--silica-cream);
+  border-color: var(--silica-border);
+  box-shadow: var(--silica-shadow-sm);
+}
+
+.panel:hover {
+  border-color: #d6d1c6;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.eyebrow,
+.mono-label {
+  color: var(--silica-muted);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--silica-green);
+}
+
+.body-copy,
+.page-description {
+  color: var(--silica-text-soft);
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.button-dark {
+  background: var(--silica-green);
+  border-color: var(--silica-green);
+  color: #fff;
+}
+
+.button-dark:hover {
+  background: var(--silica-green-2);
+  border-color: var(--silica-green-2);
+}
+
+.button-outline {
+  background: transparent;
+  border-color: var(--silica-border);
+  color: var(--silica-green);
+}
+
+.button-outline:hover {
+  background: var(--silica-green-soft);
+  border-color: #cddbd1;
+}
+
+
+/* =========================================================
+   BADGE / CHIP
+   ========================================================= */
+
+.status-badge,
+.standard-chip {
+  border-radius: 999px;
+}
+
+.tint-green {
+  background: var(--silica-green-soft);
+  border-color: #d4e1d7;
+}
+
+.tint-sand {
+  background: var(--silica-sand);
+  border-color: #e5dccb;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+input,
+select,
+textarea {
+  background: var(--silica-cream);
+  color: var(--silica-text);
+  border-color: var(--silica-border);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--silica-green-2);
+  outline-color: rgba(47, 115, 84, .14);
+}
+
+
+/* =========================================================
+   LINKS / ACTIVE
+   ========================================================= */
+
+a {
+  color: var(--silica-green-2);
+}
+
+a:hover {
+  color: var(--silica-green);
+}
+
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.notice-info {
+  background: var(--silica-green-soft);
+  border-color: #d4e1d7;
+  color: var(--silica-text-soft);
+}
+
+.notice-warning {
+  background: var(--silica-warning-soft);
+  border-color: #e9d9b8;
+  color: var(--silica-warning);
+}
+
+
+/* =========================================================
+   METRIC
+   ========================================================= */
+
+.metric {
+  background: var(--silica-paper);
+  border-color: var(--silica-border-soft);
+}
+
+.metric-value {
+  color: var(--silica-green-2);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+table thead th {
+  background: var(--silica-green);
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) td {
+  background: #fcfbf7;
+}
+
+table tbody tr:hover td {
+  background: var(--silica-green-soft);
+}
+
+
+/* =========================================================
+   ACTIVE / SELECTED
+   ========================================================= */
+
+.active,
+.is-active,
+[aria-selected="true"] {
+  border-color: #cbdcd0;
+  background: var(--silica-green-soft);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+* {
+  scrollbar-color: #bcc8c0 transparent;
+} 
+
+/* =========================================================

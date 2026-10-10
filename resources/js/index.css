@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:is(.dark *));
+/** SILICA2CON CSS entry point.
+ * The files below are intentionally imported in the same order as the
+ * original monolithic stylesheet. This preserves the existing cascade and
+ * later override patches while making the codebase easier to navigate.*/
+@import "./styles/01-foundation.css";
+@import "./styles/03-portals-dashboard.css";
+@import "./styles/04-shared-ui.css";
+@import "./styles/05-landing-cards-formulation.css";
+@import "./styles/06-formulation-decision-traceability.css";
+@import "./styles/07-responsive-and-tables.css";
+@import "./styles/08-app-foundation.css";
+@import "./styles/09-evidence-refinement.css";
+@import "./styles/10-decision-traceability-refinement.css";
+@import "./styles/12-decision-sdg-and-evidence.css";
+@import "./styles/13-gate.css";
+@import "./styles/14-recommendation.css";
+@import "./styles/15-shared-surface-polish.css";
+@import "./styles/16-environment.css";
+@import "./styles/17-data-gaps.css";
+@import "./styles/18-validation.css";
+@import "./styles/19-portals.css";
+@import "./styles/20-economics.css";
+@import "./styles/21-final-decision.css";
+@import "./styles/22-workflow-refactor.css";
+@import "./styles/doe-plan.css";
+@import "./styles/evidence-provenance.css";
+@import "./styles/23-ui-polish.css";
+@import "./styles/24-final-overrides.css";
+
+@import "./styles/25-entry-ui-redesign.css";

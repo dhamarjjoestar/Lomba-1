@@ -1,0 +1,1079 @@
+/* =========================================================   
+   DECISION — SDGs SUPPORT
+   ========================================================= */
+
+.decision-sdg {
+  margin-top: 16px;
+  padding: 20px;
+
+  border: 1px solid #d9ddd6;
+  border-radius: 16px;
+
+  background: #fffdf8;
+
+  box-shadow:
+    0 5px 18px rgba(20, 50, 35, 0.04);
+}
+
+
+/* header */
+.decision-sdg-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+
+  margin-bottom: 15px;
+  padding-bottom: 13px;
+
+  border-bottom: 1px solid #e7e2d8;
+}
+
+.decision-sdg-head .eyebrow {
+  margin: 0 0 5px;
+
+  color: #668075;
+  font-size: 8px;
+  letter-spacing: .1em;
+}
+
+.decision-sdg-head h3 {
+  margin: 0 0 4px;
+
+  color: #193b30;
+  font: 800 19px var(--app-font-serif);
+}
+
+.decision-sdg-head p {
+  max-width: 700px;
+  margin: 0;
+
+  color: #718078;
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+.decision-sdg-badge {
+  flex: 0 0 auto;
+
+  padding: 6px 9px;
+
+  border-radius: 999px;
+
+  background: #edf4ee;
+  border: 1px solid #d0ded3;
+
+  color: #337052;
+
+  font: 800 8px var(--app-font-mono);
+}
+
+
+/* grid */
+.decision-sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+
+/* card */
+.sdg-card {
+  position: relative;
+
+  display: flex;
+  gap: 11px;
+
+  min-height: 135px;
+  padding: 14px;
+
+  border-radius: 12px;
+  border: 1px solid #dedbd1;
+
+  background: #fbfaf5;
+
+  overflow: hidden;
+}
+
+
+/* SDG number */
+.sdg-number {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 8px;
+
+  color: #fff;
+
+  font: 800 11px var(--app-font-mono);
+}
+
+
+/* text */
+.sdg-card strong {
+  display: block;
+  margin-bottom: 3px;
+
+  font: 800 9px var(--app-font-mono);
+  letter-spacing: .04em;
+}
+
+.sdg-card h4 {
+  margin: 0 0 6px;
+
+  color: #1c3b31;
+
+  font: 800 13px var(--app-font-serif);
+  line-height: 1.25;
+}
+
+.sdg-card p {
+  margin: 0;
+
+  color: #6e7c75;
+
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SDG COLORS
+   Official SDG palette-inspired
+   ========================================================= */
+
+/* SDG 9 — Industry, Innovation and Infrastructure */
+.sdg-9 {
+  border-color: #d8d2d7;
+  background: #f8f5f7;
+}
+
+.sdg-9 .sdg-number {
+  background: #f26b38;
+}
+
+.sdg-9 strong {
+  color: #c65027;
+}
+
+
+/* SDG 11 — Sustainable Cities and Communities */
+.sdg-11 {
+  border-color: #d7d7d2;
+  background: #faf9f4;
+}
+
+.sdg-11 .sdg-number {
+  background: #f99d26;
+}
+
+.sdg-11 strong {
+  color: #b87517;
+}
+
+
+/* SDG 12 — Responsible Consumption and Production */
+.sdg-12 {
+  border-color: #d7ddd2;
+  background: #f6f9f3;
+}
+
+.sdg-12 .sdg-number {
+  background: #bf8b2e;
+}
+
+.sdg-12 strong {
+  color: #8f6a22;
+}
+
+
+/* SDG 13 — Climate Action */
+.sdg-13 {
+  border-color: #d7ddd2;
+  background: #f4f8f3;
+}
+
+.sdg-13 .sdg-number {
+  background: #3f7e44;
+}
+
+.sdg-13 strong {
+  color: #356b3a;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.sdg-card {
+  transition:
+    transform .16s ease,
+    box-shadow .16s ease;
+}
+
+.sdg-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(20, 50, 35, 0.07);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .decision-sdg-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .decision-sdg {
+    padding: 16px;
+  }
+
+  .decision-sdg-head {
+    flex-direction: column;
+  }
+
+  .decision-sdg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   KEPUTUSAN — COMPACT "BERSYARAT"
+   ========================================================= */
+
+.decision-card {
+  min-height: 0 !important;
+  height: auto !important;
+
+  padding: 18px 22px !important;
+  border-radius: 16px !important;
+}
+
+
+/* label atas */
+.decision-card > .eyebrow {
+  margin-bottom: 5px !important;
+  font-size: 8px !important;
+}
+
+
+/* area status utama */
+.decision-card .decision-title {
+  min-height: 0 !important;
+
+  padding: 5px 0 12px !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  text-align: center !important;
+}
+
+
+/* bersyarat */
+.decision-card .decision-title h3 {
+  margin: 0 !important;
+
+  font-size: clamp(38px, 4vw, 54px) !important;
+  line-height: .95 !important;
+
+  letter-spacing: -0.055em !important;
+}
+
+
+/* sublabel */
+.decision-card .decision-title p {
+  margin: 5px 0 0 !important;
+  font-size: 9px !important;
+}
+
+
+/* =========================================================
+   CONFIDENCE — JANGAN MAKAN BANYAK TEMPAT
+   ========================================================= */
+
+.decision-card .decision-confidence {
+  margin-top: 4px !important;
+
+  padding: 11px 13px !important;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 7px;
+  column-gap: 12px;
+  row-gap: 7px;
+
+  align-items: center;
+
+  border-radius: 10px !important;
+}
+
+
+/* label posisi bukti */
+.decision-card .decision-confidence > span {
+  margin: 0 !important;
+
+  font-size: 8px !important;
+  text-align: left !important;
+}
+
+
+/* nilai */
+.decision-card .decision-confidence > strong {
+  margin: 0 !important;
+
+  font-size: 12px !important;
+  text-align: right !important;
+}
+
+
+/* bar full width di bawah */
+.decision-card .confidence-bar {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  height: 6px !important;
+}
+
+
+/* =========================================================
+   REMOVE EMPTY FEEL
+   ========================================================= */
+
+.decision-card {
+  background:
+    radial-gradient(
+      circle at 50% 18%,
+      rgba(47, 121, 85, 0.075),
+      transparent 35%
+    ),
+    #fffdf8 !important;
+}
+
+
+/* icon sudah tidak diperlukan */
+.decision-card .decision-icon {
+  display: none !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1100px) {
+  .decision-card {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .decision-card .decision-title h3 {
+    font-size: 52px !important;
+  }
+
+  .decision-card .decision-confidence {
+    margin-top: 4px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+  .decision-card {
+    padding: 16px !important;
+  }
+
+  .decision-card .decision-title h3 {
+    font-size: 40px !important;
+  }
+}
+
+/* =========================================================
+   DECISION — COMPACT PREMIUM STATUS
+   ========================================================= */
+
+.decision-card {
+  min-height: 0 !important;
+  padding: 22px !important;
+}
+
+
+/* status */
+.decision-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 !important;
+}
+
+.decision-state-label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #628071;
+
+  font: 800 9px var(--app-font-mono);
+  letter-spacing: .12em;
+}
+
+.decision-title h3 {
+  margin: 0;
+
+  color: #176b49 !important;
+
+  font: 800 clamp(42px, 5vw, 64px)
+    var(--app-font-serif) !important;
+
+  line-height: .92 !important;
+  letter-spacing: -.055em !important;
+}
+
+.decision-title p {
+  margin: 8px 0 0;
+
+  color: #718078;
+
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   TECHNICAL BASIS
+   ========================================================= */
+
+.decision-basis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.decision-basis-card {
+  padding: 12px 13px;
+
+  border: 1px solid #dce2dc;
+  border-radius: 10px;
+
+  background: #f7faf7;
+}
+
+.decision-basis-card span,
+.decision-reason > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #708279;
+
+  font: 800 8px var(--app-font-mono);
+  letter-spacing: .08em;
+}
+
+.decision-basis-card strong {
+  display: block;
+
+  color: #1b4837;
+
+  font: 800 14px var(--app-font-serif);
+  line-height: 1.2;
+}
+
+.decision-basis-card small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #819089;
+
+  font-size: 8.5px;
+  line-height: 1.4;
+}
+
+
+/* warning */
+.decision-basis-warning {
+  border-color: #ead9b4;
+  background: #fbf5e7;
+}
+
+.decision-basis-warning strong {
+  color: #896d34;
+}
+
+
+/* =========================================================
+   WHY CONDITIONAL
+   ========================================================= */
+
+.decision-reason {
+  margin-top: 10px;
+
+  padding: 13px 14px;
+
+  border: 1px solid #e0ddd4;
+  border-radius: 11px;
+
+  background: #fffdf8;
+}
+
+.decision-reason p {
+  margin: 0;
+
+  color: #5e7068;
+
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.decision-checks {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 10px;
+}
+
+.decision-checks span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: #edf5ef;
+  border: 1px solid #d4e2d7;
+
+  color: #397055;
+
+  font-size: 8.5px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .decision-basis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-title h3 {
+    font-size: 44px !important;
+  }
+}
+
+/* =========================================================
+   EVIDENCE PAGE — PREMIUM FINAL
+   ========================================================= */
+
+.reveal:has(.evidence-source-card) {
+  --ev-green: #163f32;
+  --ev-green-2: #27694d;
+  --ev-soft: #edf5ef;
+  --ev-cream: #fffdf8;
+  --ev-sand: #faf6eb;
+  --ev-gold: #ba914d;
+  --ev-line: #dfdad0;
+  --ev-muted: #718079;
+
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+
+/* =========================================================
+   PAGE HEAD
+   ========================================================= */
+
+.reveal:has(.evidence-source-card) .page-head {
+  margin-bottom: 18px !important;
+}
+
+.reveal:has(.evidence-source-card) .page-head h2 {
+  max-width: 950px;
+
+  margin-bottom: 7px !important;
+
+  color: var(--ev-green) !important;
+
+  font-size: clamp(34px, 3.4vw, 46px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.045em !important;
+}
+
+
+/* =========================================================
+   BATAS BUKTI — FIRST / HERO
+   ========================================================= */
+
+.reveal:has(.evidence-source-card) .related-evidence {
+  order: 1 !important;
+
+  width: 100% !important;
+
+  margin: 0 0 16px !important;
+
+  padding: 22px 24px 20px !important;
+
+  border: 1px solid #d7dfd8 !important;
+  border-radius: 18px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3f8f3 0%,
+      #fffdf8 62%,
+      #faf8f1 100%
+    ) !important;
+
+  box-shadow:
+    0 10px 30px rgba(22, 63, 50, .055) !important;
+}
+
+
+/* header */
+.reveal:has(.evidence-source-card)
+.related-evidence > .panel-head {
+  display: flex !important;
+
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+
+  margin-bottom: 2px !important;
+  padding-bottom: 14px !important;
+
+  border-bottom: 1px solid #dfe5df !important;
+
+  text-align: left !important;
+}
+
+.reveal:has(.evidence-source-card)
+.related-evidence .panel-head h3 {
+  margin: 0 0 5px !important;
+
+  color: var(--ev-green) !important;
+
+  font: 800 27px var(--app-font-serif) !important;
+
+  line-height: 1 !important;
+  letter-spacing: -.04em !important;
+}
+
+.reveal:has(.evidence-source-card)
+.related-evidence .panel-head p {
+  margin: 0 !important;
+
+  color: var(--ev-muted) !important;
+
+  font-size: 10.5px !important;
+  line-height: 1.45 !important;
+}
+
+.reveal:has(.evidence-source-card)
+.related-evidence .panel-head > .mono-label {
+  flex: 0 0 auto;
+
+  padding: 6px 9px !important;
+
+  border: 1px solid #d8e0d9 !important;
+  border-radius: 999px !important;
+
+  background: #edf4ee !important;
+  color: #557363 !important;
+
+  font-size: 7.5px !important;
+}
+
+
+/* =========================================================
+   TIMELINE — MORE VERTICAL SPACE
+   ========================================================= */
+
+.reveal:has(.evidence-source-card) .evidence-timeline {
+  position: relative !important;
+
+  width: 100% !important;
+
+  padding:
+    45px 18px
+    92px !important;
+
+  overflow: visible !important;
+}
+
+
+/* line */
+.reveal:has(.evidence-source-card)
+.evidence-timeline-track {
+  position: relative !important;
+
+  width: 100% !important;
+  height: 6px !important;
+
+  border-radius: 999px !important;
+
+  background: #dfe6df !important;
+}
+
+
+/* evidence range */
+.reveal:has(.evidence-source-card)
+.evidence-timeline-fill {
+  height: 100% !important;
+
+  border-radius: 999px !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #bad0bf,
+      #caae70
+    ) !important;
+}
+
+
+/* point */
+.reveal:has(.evidence-source-card)
+.evidence-timeline-point {
+  z-index: 5 !important;
+}
+
+
+/* marker */
+.reveal:has(.evidence-source-card)
+.evidence-timeline-marker {
+  width: 13px !important;
+  height: 13px !important;
+
+  border: 2px solid #49755f !important;
+
+  background: #fffdf8 !important;
+
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,.9) !important;
+}
+
+
+/* =========================================================
+   SEMUA LABEL DITURUNKAN KE BAWAH
+   ========================================================= */
+
+/* batalkan above / below lama */
+.reveal:has(.evidence-source-card)
+.evidence-timeline-point.is-above
+.evidence-timeline-tag,
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-point.is-below
+.evidence-timeline-tag,
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-point.is-active
+.evidence-timeline-tag {
+  top: 24px !important;
+  bottom: auto !important;
+}
+
+
+/* tag */
+.reveal:has(.evidence-source-card)
+.evidence-timeline-tag {
+  z-index: 20 !important;
+
+  min-width: 70px !important;
+
+  padding: 7px 8px !important;
+
+  border: 1px solid #ddd8cc !important;
+  border-radius: 9px !important;
+
+  background: rgba(255,253,248,.98) !important;
+
+  text-align: center !important;
+
+  box-shadow:
+    0 5px 14px rgba(22,63,50,.075) !important;
+
+  white-space: nowrap !important;
+}
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-tag strong {
+  display: block !important;
+
+  color: #203f34 !important;
+
+  font: 800 14px var(--app-font-serif) !important;
+  line-height: 1 !important;
+}
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-tag small {
+  display: block !important;
+
+  margin-top: 3px !important;
+
+  color: #7a8780 !important;
+
+  font-size: 8px !important;
+}
+
+
+/* =========================================================
+   ACTIVE 8%
+   ========================================================= */
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-point.is-active
+.evidence-timeline-marker {
+  width: 22px !important;
+  height: 22px !important;
+
+  border: 3px solid var(--ev-gold) !important;
+
+  background: #ead39a !important;
+
+  box-shadow:
+    0 0 0 4px #fffdf8,
+    0 0 0 8px rgba(186,145,77,.18) !important;
+}
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-point.is-active
+.evidence-timeline-tag {
+  min-width: 88px !important;
+
+  padding: 8px 10px !important;
+
+  border-color: #d2ad64 !important;
+
+  background: #fbf3df !important;
+
+  box-shadow:
+    0 9px 22px rgba(148,108,40,.14) !important;
+}
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-point.is-active
+.evidence-timeline-tag strong {
+  color: #70572c !important;
+
+  font-size: 17px !important;
+}
+
+.reveal:has(.evidence-source-card)
+.evidence-timeline-active-label {
+  display: block !important;
+
+  margin-top: 5px !important;
+
+  color: #896b35 !important;
+
+  font: 800 7px var(--app-font-mono) !important;
+  line-height: 1 !important;
+}
+
+
+/* axis */
+.reveal:has(.evidence-source-card)
+.evidence-timeline-axis {
+  display: flex !important;
+
+  justify-content: space-between !important;
+
+  margin-top: 72px !important;
+  padding: 0 2px !important;
+
+  color: #6f7d76 !important;
+
+  font: 800 8px var(--app-font-mono) !important;
+}
+
+
+/* description */
+.reveal:has(.evidence-source-card)
+.related-evidence > .small-copy {
+  max-width: 980px !important;
+
+  margin: 0 auto !important;
+  padding-top: 13px !important;
+
+  border-top: 1px solid #e1e5df !important;
+
+  color: #68766f !important;
+
+  font-size: 9.5px !important;
+  line-height: 1.55 !important;
+
+  text-align: center !important;
+}
+
+.reveal:has(.evidence-source-card)
+.related-evidence > .small-copy strong {
+  color: #315e49 !important;
+}
+
+
+/* =========================================================
+   TOP CARDS — AFTER TIMELINE
+   ========================================================= */
+
+.reveal:has(.evidence-source-card)
+.evidence-layout {
+  order: 2 !important;
+
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(390px, .92fr) !important;
+
+  gap: 16px !important;
+
+  align-items: stretch !important;
+}
+
+
+/* =========================================================
+   LEFT RESULT CARD — BALANCED
+   ========================================================= */
+
+.reveal:has(.evidence-source-card)
+.evidence-layout > .evidence-hero {
+  min-height: 315px !important;
+
+  padding: 23px 26px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  justify-content: center !important;
+  align-items: center !important;
+
+  text-align: center !important;
+
+  background:
+    radial-gradient(
+      circle at 88% 15%,
+      rgba(47,115,85,.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #f2f7f3,
+      #fffdf8 65%
+    ) !important;
+}
+
+
+/* HAPUS LOGO TENGAH */
+.reveal:has(.evidence-source-card)
+.evidence-hero .evidence-mark {
+  display: none !important;
+}
+
+
+/* hasil mesin */
+.reveal:has(.evidence-source-card)
+.evidence-hero .eyebrow {
+  margin-bottom: 8px !important;
+
+  color: #5d776b !important;
+
+  font-size: 8px !important;
+  letter-spacing: .14em !important;
+}
+
+
+/* DIRECT */
+.reveal:has(.evidence-source-card)
+.evidence-hero > h3 {
+  margin: 0 !important;
+
+  color: var(--ev-green-2) !important;
+
+  font: 800 47px var(--app-font-serif) !important;
+
+  line-height: .95 !important;
+  letter-spacing: -.05em !important;
+}
+
+
+/* explanation */
+.reveal:has(.evidence-source-card)
+.evidence-hero > p:not(.eyebrow) {
+  max-width: 590px !important;
+
+  margin: 13px auto 20px !important;
+
+  color: #62766c !important;
+
+  font-size: 11px !important;
+  line-height: 1.65 !important;
+}
+
+
+/* facts */
+.reveal:has(.evidence-source-card)
+.evidence-facts {
+  width: 100% !important;
+
+  margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   RIGHT SOURCE CARD
+   ========================================================= */
+
+.reveal:has(.evidence-source-card)
+.evidence-layout > .panel:not(.evidence-hero) {
+  min-height: 315px !important;
+
+  padding: 19px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .reveal:has(.evidence-source-card)
+  .evidence-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reveal:has(.evidence-source-card)
+  .evidence-timeline {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+/* =========================================================

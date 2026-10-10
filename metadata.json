@@ -1,0 +1,6 @@
+{
+  "name": "SILICA2CON - Decision Support System",
+  "description": "Evidence-Based Decision Support System untuk Transformasi Residu Geothermal Menjadi Material Konstruksi Berkelanjutan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

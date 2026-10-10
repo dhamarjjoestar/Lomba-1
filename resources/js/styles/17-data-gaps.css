@@ -1,0 +1,548 @@
+/* =========================================================
+   SILICA2CON — DATA GAP CONTROL ROOM
+   ========================================================= */
+
+.gap-control-room {
+  --gap-green: #173d2f;
+  --gap-green-2: #2f7354;
+  --gap-green-soft: #edf5ef;
+
+  --gap-gold: #b68a43;
+  --gap-gold-soft: #faf3e4;
+
+  --gap-paper: #fffdf8;
+  --gap-sand: #f7f2e7;
+
+  --gap-line: #ddd8ce;
+  --gap-muted: #74817b;
+
+  gap: 17px !important;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.gap-control-room .page-head {
+  margin-bottom: 2px !important;
+}
+
+.gap-control-room .page-head h2 {
+  color: var(--gap-green) !important;
+
+  font-size: clamp(36px, 4vw, 49px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.05em !important;
+}
+
+.gap-control-room .page-description {
+  max-width: 900px !important;
+
+  color: var(--gap-muted) !important;
+
+  font-size: 11.5px !important;
+  line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   COMMAND BAR
+   ========================================================= */
+
+.gap-command-bar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px 18px;
+
+  border: 1px solid #d5dfd7;
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef5ef,
+      #fffdf8 75%
+    );
+
+  box-shadow:
+    0 7px 22px rgba(20, 48, 38, .04);
+}
+
+.gap-command-title .eyebrow {
+  margin-bottom: 3px;
+
+  color: #698077;
+  font-size: 7.5px;
+}
+
+.gap-command-title h3 {
+  margin: 0;
+
+  color: var(--gap-green);
+
+  font: 800 21px var(--app-font-serif);
+}
+
+
+.gap-command-metrics {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(85px, 1fr));
+
+  min-width: 310px;
+
+  border: 1px solid #d9e1db;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  background: rgba(255,255,255,.6);
+}
+
+.gap-command-metrics > div {
+  padding: 8px 11px;
+
+  text-align: center;
+}
+
+.gap-command-metrics > div + div {
+  border-left: 1px solid #d9e1db;
+}
+
+.gap-command-metrics strong {
+  display: block;
+
+  color: #284b3d;
+
+  font: 800 19px var(--app-font-serif);
+}
+
+.gap-command-metrics span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #7b8881;
+
+  font: 800 7px var(--app-font-mono);
+  letter-spacing: .05em;
+}
+
+.gap-command-metrics .is-p0 strong {
+  color: #987333;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.gap-priority-section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.gap-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.gap-section-heading .eyebrow {
+  margin-bottom: 3px;
+
+  color: #78867f;
+
+  font-size: 7.5px;
+}
+
+.gap-section-heading h3 {
+  margin: 0;
+
+  color: #203f34;
+
+  font: 800 19px var(--app-font-serif);
+}
+
+.gap-section-count {
+  flex: 0 0 auto;
+
+  padding: 6px 9px;
+
+  border: 1px solid #ded9cf;
+  border-radius: 999px;
+
+  background: #faf8f2;
+
+  color: #718078;
+
+  font: 800 7.5px var(--app-font-mono);
+}
+
+
+/* =========================================================
+   CARD GRID
+   ========================================================= */
+
+.gap-control-grid {
+  display: grid;
+
+  gap: 11px;
+}
+
+.gap-grid-p0 {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.gap-grid-p1 {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.gap-control-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding: 16px;
+
+  border: 1px solid var(--gap-line);
+  border-radius: 14px;
+
+  background: var(--gap-paper);
+
+  box-shadow:
+    0 5px 17px rgba(20,48,38,.035);
+}
+
+
+/* P0 */
+.gap-p0 {
+  border-color: #e3d7b9;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fbf5e8,
+      #fffdf8
+    );
+}
+
+
+/* P1 */
+.gap-p1 {
+  background:
+    linear-gradient(
+      145deg,
+      #fbfaf6,
+      #fffdf8
+    );
+}
+
+
+/* featured */
+.gap-featured {
+  min-height: 255px;
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.gap-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+.gap-priority {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 31px;
+  height: 24px;
+
+  border-radius: 7px;
+
+  background: #eadab4;
+  color: #765a24;
+
+  font: 800 9px var(--app-font-mono);
+}
+
+.gap-p1 .gap-priority {
+  background: #e7ece6;
+  color: #52705f;
+}
+
+.gap-id {
+  color: #8b948e;
+
+  font: 800 7.5px var(--app-font-mono);
+
+  letter-spacing: .05em;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.gap-control-card h3 {
+  margin: 0 0 14px;
+
+  color: #24453a;
+
+  font: 800 17px var(--app-font-serif);
+
+  line-height: 1.15;
+  letter-spacing: -.015em;
+}
+
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.gap-detail {
+  margin-bottom: 10px;
+}
+
+.gap-detail > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #8a928d;
+
+  font: 800 7px var(--app-font-mono);
+  letter-spacing: .08em;
+}
+
+.gap-detail > p {
+  margin: 0;
+
+  color: #68776f;
+
+  font-size: 9.5px;
+  line-height: 1.5;
+}
+
+.gap-impact {
+  margin-top: auto;
+
+  padding-top: 10px;
+
+  border-top: 1px solid #e8e3da;
+}
+
+.gap-impact > p {
+  color: #4e665b;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ROUTE
+   ========================================================= */
+
+.gap-route {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  width: 100%;
+
+  margin-top: 12px;
+  padding: 9px 10px;
+
+  border: 1px solid #dce3dc;
+  border-radius: 9px;
+
+  background: rgba(255,255,255,.7);
+
+  color: #5e7568;
+
+  text-align: left;
+}
+
+.gap-route span {
+  color: #87918b;
+
+  font-size: 8px;
+}
+
+.gap-route strong {
+  margin-left: auto;
+
+  color: #315c48;
+
+  font-size: 9px;
+}
+
+.gap-route svg {
+  flex: 0 0 auto;
+
+  color: #47725d;
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.gap-control-note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 13px 14px;
+
+  border: 1px solid #d8e1da;
+  border-radius: 12px;
+
+  background: #eff5f0;
+}
+
+.gap-note-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 29px;
+  height: 29px;
+
+  border-radius: 8px;
+
+  background: #dcebe0;
+
+  color: #46705a;
+}
+
+.gap-control-note > div:last-child {
+  min-width: 0;
+}
+
+.gap-control-note > div:last-child > span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #70847a;
+
+  font: 800 7px var(--app-font-mono);
+}
+
+.gap-control-note strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #2e5745;
+
+  font-size: 10px;
+}
+
+.gap-control-note p {
+  margin: 0;
+
+  color: #718079;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .gap-grid-p0 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gap-grid-p1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .gap-command-bar {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .gap-command-metrics {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .gap-grid-p0 {
+    grid-template-columns: 1fr;
+  }
+
+  .gap-featured {
+    min-height: 0;
+  }
+}
+/* =========================================================
+   SILICA2CON — RESEARCH ROADMAP / CONTROL ROOM
+   ========================================================= */
+
+.validation-roadmap {
+  --road-green: #173d2f;
+  --road-green-2: #2f7354;
+  --road-green-soft: #edf5ef;
+
+  --road-gold: #b68a43;
+  --road-gold-soft: #faf3e4;
+
+  --road-paper: #fffdf8;
+  --road-sand: #f7f2e7;
+
+  --road-line: #ded9cf;
+  --road-muted: #74817b;
+
+  gap: 16px !important;
+}
+
+
