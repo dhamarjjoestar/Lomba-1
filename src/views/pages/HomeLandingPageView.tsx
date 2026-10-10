@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageId } from '../../models/silica.model';
 import { HeroSectionView } from '../sections/HeroSectionView';
+import { AlurEvaluasiSectionView } from '../sections/AlurEvaluasiSectionView';
 import {
   ArrowRight,
   AlertTriangle,
@@ -61,6 +62,9 @@ export const HomeLandingPageView: React.FC<HomeLandingPageViewProps> = ({
     <div className="w-full">
       {/* 1. HERO SECTION + 3 FAKTA KUNCI BERLABEL STATUS */}
       <HeroSectionView onNavigate={onNavigate} />
+
+      {/* 1B. SECTION ALUR EVALUASI (DARI DATA HINGGA KEPUTUSAN — 10 LANGKAH) */}
+      <AlurEvaluasiSectionView />
 
       {/* 2. DIAGRAM ALUR SINGKAT 4 BLOK: SLUDGE -> GEOCEDS -> KEPUTUSAN -> PAVING SIRKULAR */}
       <section className="py-14 bg-white border-t border-slate-200">

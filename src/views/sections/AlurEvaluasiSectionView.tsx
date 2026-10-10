@@ -78,6 +78,7 @@ const StepIcon: React.FC<{ type: AlurEvaluasiStep['iconType'] }> = ({ type }) =>
 interface StepItemCardProps {
   step: AlurEvaluasiStep;
   isLastInRow: boolean;
+  isVeryLastStep: boolean;
   isSelected: boolean;
   onHover: (id: string | null) => void;
   onClick: (id: string) => void;
@@ -86,6 +87,7 @@ interface StepItemCardProps {
 const StepItemCard: React.FC<StepItemCardProps> = ({
   step,
   isLastInRow,
+  isVeryLastStep,
   isSelected,
   onHover,
   onClick,
@@ -95,14 +97,16 @@ const StepItemCard: React.FC<StepItemCardProps> = ({
       onMouseEnter={() => onHover(step.id)}
       onMouseLeave={() => onHover(null)}
       onClick={() => onClick(step.id)}
-      className={`group relative flex flex-col items-start cursor-pointer transition-all duration-200 hover:-translate-y-0.5 rounded-xl p-1.5 sm:p-2 ${
-        isSelected ? 'bg-emerald-50/90 ring-1 ring-emerald-400' : 'hover:bg-emerald-50/50'
-      } ${!isLastInRow ? 'pr-1 sm:pr-2' : ''}`}
+      className={`group relative flex flex-col items-start cursor-pointer transition-all duration-200 hover:-translate-y-0.5 rounded-2xl p-3 sm:p-3 md:p-2 border md:border-transparent min-w-0 ${
+        isSelected
+          ? 'bg-emerald-50/90 border-emerald-400 ring-1 ring-emerald-400'
+          : 'bg-white/75 md:bg-transparent border-slate-200/80 hover:bg-emerald-50/50'
+      } ${!isLastInRow ? 'md:pr-2' : ''}`}
     >
       {/* Top Header: Badge nomor & Garis penghubung horizontal */}
-      <div className="w-full flex items-center justify-between mb-3">
+      <div className="w-full flex items-center justify-between mb-2.5 sm:mb-3">
         <div
-          className={`w-9 h-9 rounded-full font-bold text-xs flex items-center justify-center transition-all ${
+          className={`w-9 h-9 rounded-full font-bold text-xs flex items-center justify-center shrink-0 transition-all ${
             isSelected
               ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/30'
               : 'bg-emerald-100 text-emerald-800 shadow-xs group-hover:bg-emerald-500 group-hover:text-white'
@@ -111,29 +115,39 @@ const StepItemCard: React.FC<StepItemCardProps> = ({
           {step.stepNumber}
         </div>
 
-        {/* Panah konektor ke langkah berikutnya (khusus bukan elemen terakhir di baris) */}
+        {/* Panah konektor di layar mobile/tablet sebagai indikator urutan langkah */}
+        {!isVeryLastStep && (
+          <span className="md:hidden text-[10px] font-mono font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+            Langkah {step.stepNumber} →
+          </span>
+        )}
+        {isVeryLastStep && (
+          <span className="md:hidden text-[10px] font-mono font-semibold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full">
+            Tahap Akhir
+          </span>
+        )}
+
+        {/* Panah konektor horizontal ke langkah berikutnya (khusus desktop md+) */}
         {!isLastInRow ? (
-          <div className="flex flex-1 items-center px-1 sm:px-2">
+          <div className="hidden md:flex flex-1 items-center px-2">
             <div className="h-[1.5px] w-full bg-emerald-200"></div>
             <div className="w-0 h-0 border-y-[3.5px] border-y-transparent border-l-[6px] border-l-emerald-400"></div>
           </div>
         ) : (
-          <div className="flex-1"></div>
+          <div className="hidden md:block flex-1"></div>
         )}
       </div>
 
       {/* Body: Ikon dan teks deskripsi langkah */}
-      <div className="flex items-start gap-2.5 sm:gap-3 w-full">
-        <div className="w-6 h-6 sm:w-7 sm:h-7 shrink-0 text-emerald-600 pt-0.5 group-hover:text-emerald-700 transition-colors">
+      <div className="flex items-start gap-3 w-full min-w-0">
+        <div className="w-7 h-7 shrink-0 text-emerald-600 pt-0.5 group-hover:text-emerald-700 transition-colors">
           <StepIcon type={step.iconType} />
         </div>
-        <div className="space-y-1">
-          <div className="flex items-center gap-1.5">
-            <h3 className="font-bold text-xs text-gray-800 tracking-tight leading-tight">
-              {step.title}
-            </h3>
-          </div>
-          <p className="text-[11px] leading-relaxed text-gray-600">
+        <div className="space-y-1 min-w-0 flex-1">
+          <h3 className="font-bold text-xs sm:text-[13px] md:text-xs text-gray-800 tracking-tight leading-snug break-words">
+            {step.title}
+          </h3>
+          <p className="text-[11px] sm:text-xs md:text-[11px] leading-relaxed text-gray-600 break-words">
             {step.description}
           </p>
         </div>
@@ -163,9 +177,9 @@ export const AlurEvaluasiSectionView: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 px-3 sm:px-6 lg:px-8 flex justify-center bg-slate-50 border-t border-slate-200">
+    <section className="py-10 sm:py-14 px-3.5 sm:px-6 lg:px-8 flex justify-center bg-slate-50 border-t border-slate-200 overflow-x-hidden">
       {/* MAIN CONTAINER: SECTION ALUR EVALUASI */}
-      <div className="w-full max-w-[1240px] canvas-bg rounded-3xl sm:rounded-[2.5rem] border border-gray-200 shadow-[0_20px_50px_-15px_rgba(16,185,129,0.12)] p-4 sm:p-8 lg:p-12 relative overflow-hidden">
+      <div className="w-full max-w-[1240px] canvas-bg rounded-3xl sm:rounded-[2.5rem] border border-gray-200 shadow-[0_20px_50px_-15px_rgba(16,185,129,0.12)] p-5 sm:p-8 lg:p-12 relative overflow-hidden min-w-0">
         
         {/* Latar Belakang Daun Botanik Transparan Organik */}
         <div className="absolute -top-10 -left-10 w-60 h-60 opacity-20 pointer-events-none -z-0">
@@ -182,96 +196,83 @@ export const AlurEvaluasiSectionView: React.FC = () => {
         </div>
 
         {/* SECTION HEADER: Hierarki Teks */}
-        <div id="alur-evaluasi" className="relative z-10 space-y-6 sm:space-y-8">
+        <div id="alur-evaluasi" className="relative z-10 space-y-6 sm:space-y-10 min-w-0">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-200 pb-5">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-200 pb-5 sm:pb-6">
             {/* Sisi Kiri Header */}
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 min-w-0">
               <span className="block text-[11px] sm:text-xs font-bold tracking-[0.22em] text-emerald-700 uppercase">
                 {header.tag}
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-[40px] leading-tight text-gray-900 font-extrabold tracking-tight">
+              <h2 className="font-serif text-2xl sm:text-4xl lg:text-[42px] leading-tight text-gray-800 font-extrabold tracking-tight break-words">
                 {header.title}
               </h2>
             </div>
 
             {/* Sisi Kanan Header */}
             <p className="text-xs sm:text-[13px] text-gray-600 max-w-md leading-relaxed md:text-right">
-              {header.subtitle}
+              Pendekatan sistematis, transparan, dan berbasis bukti, untuk memastikan setiap material{' '}
+              <strong className="font-semibold text-gray-800">layak dikembangkan</strong>.
             </p>
           </div>
 
-          {/* Mobile swipe hint banner (khusus mobile/tablet agar pengguna mengetahui alur lengkap dapat digeser) */}
-          <div className="flex lg:hidden items-center justify-between text-xs text-emerald-800 bg-emerald-50/90 border border-emerald-200 rounded-xl px-3.5 py-2">
-            <div className="flex items-center gap-2 font-medium">
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span>Alur Utuh 10 Langkah (Format Desktop)</span>
+          {/* WORKFLOW DIAGRAM: 10 LANGKAH RESPONSIVE TANPA PECAH DI HP */}
+          <div className="relative py-1 sm:py-2 min-w-0">
+
+            {/* ================= BARIS 1: LANGKAH 01 - 05 ================= */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-4 relative z-10">
+              {row1Steps.map((step, index) => (
+                <StepItemCard
+                  key={step.id}
+                  step={step}
+                  isLastInRow={index === row1Steps.length - 1}
+                  isVeryLastStep={false}
+                  isSelected={selectedStepId === step.id}
+                  onHover={setHoveredStepId}
+                  onClick={handleCardClick}
+                />
+              ))}
             </div>
-            <span className="text-[11px] text-emerald-700 font-semibold bg-white px-2.5 py-0.5 rounded-md border border-emerald-200 shadow-2xs">
-              Geser horizontal →
-            </span>
-          </div>
 
-          {/* WORKFLOW DIAGRAM: 10 LANGKAH DENGAN PALET EMERALD GREEN */}
-          <div className="relative py-2 overflow-x-auto pb-4 pt-1 touch-pan-x custom-scrollbar">
-            <div className="min-w-[920px] lg:min-w-0">
-
-              {/* ================= BARIS 1: LANGKAH 01 - 05 ================= */}
-              <div className="grid grid-cols-5 gap-3 lg:gap-4 relative z-10">
-                {row1Steps.map((step, index) => (
-                  <StepItemCard
-                    key={step.id}
-                    step={step}
-                    isLastInRow={index === row1Steps.length - 1}
-                    isSelected={selectedStepId === step.id}
-                    onHover={setHoveredStepId}
-                    onClick={handleCardClick}
-                  />
-                ))}
-              </div>
-
-              {/* ================= S-CURVE CONNECTOR (DARI STEP 05 KE STEP 06) ================= */}
-              <div className="block w-full my-3 sm:my-4 relative h-8 sm:h-10 pointer-events-none">
-                <svg className="w-full h-full" viewBox="0 0 1000 40" preserveAspectRatio="none" fill="none">
-                  <path 
-                    d="M 900 -15 H 960 C 975 -15, 985 -5, 985 10 C 985 22, 975 24, 960 24 H 40 C 25 24, 15 28, 15 38 V 45" 
-                    stroke="#10B981" 
-                    strokeWidth="1.8" 
-                    strokeLinecap="round"
-                  />
-                  <polygon points="11,43 19,43 15,50" fill="#10B981" />
-                </svg>
-              </div>
-
-              {/* ================= BARIS 2: LANGKAH 06 - 10 ================= */}
-              <div className="grid grid-cols-5 gap-3 lg:gap-4 relative z-10 pt-1 sm:pt-0">
-                {row2Steps.map((step, index) => (
-                  <StepItemCard
-                    key={step.id}
-                    step={step}
-                    isLastInRow={index === row2Steps.length - 1}
-                    isSelected={selectedStepId === step.id}
-                    onHover={setHoveredStepId}
-                    onClick={handleCardClick}
-                  />
-                ))}
-              </div>
-
+            {/* ================= S-CURVE CONNECTOR (DARI STEP 05 KE STEP 06 KHUSUS DESKTOP) ================= */}
+            <div className="hidden md:block w-full my-4 relative h-10 pointer-events-none">
+              <svg className="w-full h-full" viewBox="0 0 1000 40" preserveAspectRatio="none" fill="none">
+                <path 
+                  d="M 900 -15 H 960 C 975 -15, 985 -5, 985 10 C 985 22, 975 24, 960 24 H 40 C 25 24, 15 28, 15 38 V 45" 
+                  stroke="#10B981" 
+                  strokeWidth="1.8" 
+                  strokeLinecap="round"
+                />
+                <polygon points="11,43 19,43 15,50" fill="#10B981" />
+              </svg>
             </div>
+
+            {/* ================= BARIS 2: LANGKAH 06 - 10 ================= */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-4 relative z-10 pt-3.5 sm:pt-4 md:pt-0">
+              {row2Steps.map((step, index) => (
+                <StepItemCard
+                  key={step.id}
+                  step={step}
+                  isLastInRow={index === row2Steps.length - 1}
+                  isVeryLastStep={index === row2Steps.length - 1}
+                  isSelected={selectedStepId === step.id}
+                  onHover={setHoveredStepId}
+                  onClick={handleCardClick}
+                />
+              ))}
+            </div>
+
           </div>
 
           {/* Info pill saat langkah diklik / aktif */}
           {selectedStep && (
-            <div className="mt-4 p-3.5 bg-emerald-50/90 border border-emerald-200 rounded-xl flex items-center justify-between text-xs text-slate-700 animate-fadeIn">
-              <div className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[10px]">
+            <div className="mt-2 p-3.5 bg-emerald-50/90 border border-emerald-200 rounded-xl flex flex-wrap items-center justify-between gap-2 text-xs text-slate-700">
+              <div className="flex flex-wrap items-center gap-2 min-w-0">
+                <span className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-[10px] shrink-0">
                   {selectedStep.stepNumber}
                 </span>
                 <span className="font-semibold text-emerald-950">{selectedStep.title}</span>
-                <span className="text-emerald-700 hidden sm:inline">— {selectedStep.category}</span>
+                <span className="text-emerald-700">— {selectedStep.category}</span>
                 {selectedStep.detailBadge && (
                   <span className="px-2 py-0.5 rounded-md bg-white border border-emerald-300 text-emerald-800 font-medium text-[11px]">
                     {selectedStep.detailBadge}
@@ -280,7 +281,7 @@ export const AlurEvaluasiSectionView: React.FC = () => {
               </div>
               <button
                 onClick={() => setSelectedStepId(null)}
-                className="text-slate-400 hover:text-slate-700 text-xs px-2 py-1 rounded"
+                className="text-slate-500 hover:text-slate-800 text-xs font-medium px-2 py-1 rounded cursor-pointer shrink-0"
               >
                 Tutup
               </button>
