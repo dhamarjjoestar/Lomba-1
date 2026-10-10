@@ -16,6 +16,10 @@ import { CharacterizationStageView } from '../simulasi/CharacterizationStageView
 import { FormulationStageView } from '../simulasi/FormulationStageView';
 import { CandidateAnalysisStageView } from '../simulasi/CandidateAnalysisStageView';
 import { TechnicalGateStageView } from '../simulasi/TechnicalGateStageView';
+import { EconomicsStageView } from '../simulasi/EconomicsStageView';
+import { EnvironmentStageView } from '../simulasi/EnvironmentStageView';
+import { RecommendationStageView } from '../simulasi/RecommendationStageView';
+import { QuickDecisionSplitView } from '../simulasi/QuickDecisionSplitView';
 
 interface SimulasiPageViewProps {
   onBackToHome: () => void;
@@ -52,8 +56,17 @@ export const SimulasiPageView: React.FC<SimulasiPageViewProps> = ({
     mix,
     setMix,
     updateMixField,
+    economics,
+    updateEconomicsField,
+    batchInputs,
+    updateBatchInputsField,
     study,
+    paperScenarioName,
+    paperScenario,
+    paperBridge,
+    paperMeta,
     datasetLabel,
+    formatIdr,
     displayDecision,
     evidenceLabel,
   } = useSimulationController();
@@ -324,21 +337,21 @@ export const SimulasiPageView: React.FC<SimulasiPageViewProps> = ({
           {/* Main Workspace Content Area */}
           <div className="flex-1 w-full min-w-0">
             {isDashboardActive ? (
-              /* SUPPORTING PAGE: DASHBOARD SIMULASI */
+              /* SUPPORTING PAGE: SIMULASI KEPUTUSAN 2 SISI (SPLIT INPUT-OUTPUT DEMO) */
               <section
                 aria-labelledby="dashboard-heading"
                 data-testid="workspace-dashboard-view"
-                className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8"
+                className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 md:p-8 space-y-6"
               >
                 {/* Header */}
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 sm:pb-6 border-b border-slate-200">
-                  <div className="space-y-2 max-w-3xl min-w-0">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-slate-200">
+                  <div className="space-y-1.5 max-w-3xl min-w-0">
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-teal-800 font-semibold">
                       <DashboardIcon className="w-4 h-4 text-teal-700 shrink-0" />
-                      <span>Halaman Pendukung Ruang Kerja</span>
+                      <span>Lapis Demo · Simulasi Keputusan Dua Sisi</span>
                       <span aria-hidden="true">·</span>
                       <span className="font-normal text-slate-500">
-                        Bukan tahap ke-9 dalam urutan alur kerja
+                        Input Batch → Gerbang Evaluasi → Keputusan Tertelusur
                       </span>
                     </div>
 
@@ -346,11 +359,11 @@ export const SimulasiPageView: React.FC<SimulasiPageViewProps> = ({
                       id="dashboard-heading"
                       className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight break-words"
                     >
-                      {dashboardMeta.title}
+                      Simulator Keputusan Batch GEOCEDS
                     </h1>
 
-                    <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
-                      {dashboardMeta.purpose}
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      Pilih skenario preset di bawah atau sesuaikan identitas batch, jenis material, checklist karakterisasi, dan hasil uji di sisi kiri untuk melihat perubahan status keputusan secara instan di sisi kanan.
                     </p>
                   </div>
 
@@ -362,66 +375,29 @@ export const SimulasiPageView: React.FC<SimulasiPageViewProps> = ({
                   >
                     <Compass className="w-4 h-4 shrink-0" />
                     <span className="truncate">
-                      Kembali ke Tahap {currentStageMeta.stageNumber}:{' '}
-                      {currentStageMeta.title}
+                      Telusuri Detail 8 Tahap (Tahap {currentStageMeta.stageNumber})
                     </span>
                   </button>
                 </div>
 
-                {/* Clearly Marked Phase 1 Placeholder Box */}
-                <div
-                  data-testid="dashboard-placeholder-notice"
-                  className="rounded-xl sm:rounded-2xl bg-slate-50 border border-dashed border-slate-300 p-4 sm:p-6 md:p-8 space-y-4"
-                >
-                  <div className="flex flex-wrap items-center gap-1.5 text-xs font-semibold text-teal-800">
-                    <Clock className="w-4 h-4 text-teal-700 shrink-0" />
-                    <span>Placeholder Fase 1 · Struktur Dashboard Simulasi</span>
-                  </div>
-
-                  <h2 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-snug">
-                    Ringkasan Hasil Simulasi Aktif Akan Ditampilkan di Sini
-                  </h2>
-
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
-                    {dashboardMeta.placeholderNotice} Pada tampilan ini nantinya
-                    pengguna dapat memantau ringkasan status dari setiap tahap
-                    tanpa harus berpindah halaman satu per satu, maupun langsung
-                    melompat ke tahap tertentu yang membutuhkan penyesuaian input.
-                  </p>
-
-                  {/* Structural Stage Links Overview (No invented metrics or values) */}
-                  <div className="pt-4 border-t border-slate-200">
-                    <div className="text-xs font-semibold text-slate-700 mb-3">
-                      Pintasan ke 8 Tahap Evaluasi Utama:
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
-                      {workflowStages.map((stage) => (
-                        <button
-                          key={stage.id}
-                          type="button"
-                          onClick={() => selectStage(stage.id)}
-                          className="p-3 min-h-[44px] rounded-xl bg-white hover:bg-emerald-50/60 border border-slate-200 hover:border-emerald-300 text-left transition-colors cursor-pointer flex flex-col justify-between gap-1.5"
-                        >
-                          <div className="flex items-center justify-between text-xs gap-2">
-                            <span className="font-mono font-bold text-emerald-700 tabular-nums">
-                              Tahap {stage.stageNumber}
-                            </span>
-                            <span className="text-[11px] text-slate-400 shrink-0">
-                              Buka →
-                            </span>
-                          </div>
-                          <div className="text-xs font-bold text-slate-900">
-                            {stage.title}
-                          </div>
-                          <div className="text-[11px] text-slate-500 line-clamp-2">
-                            {stage.shortLabel}
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                {/* Split Input-Output Interactive View */}
+                <QuickDecisionSplitView
+                  study={study}
+                  characterization={characterization}
+                  mix={mix}
+                  economics={economics}
+                  datasetId={datasetId}
+                  paperScenarioName={paperScenarioName}
+                  paperScenario={paperScenario}
+                  workflowStages={workflowStages}
+                  onSelectDemoDataset={selectDemoDataset}
+                  onUpdateCharacterizationField={updateCharacterizationField}
+                  onUpdateMixField={updateMixField}
+                  onUpdateEconomicsField={updateEconomicsField}
+                  onSelectStage={selectStage}
+                  formatIdr={formatIdr}
+                  displayDecision={displayDecision}
+                />
               </section>
             ) : (
               /* PRIMARY WORKFLOW STAGE VIEW (01 - 08) */
@@ -446,10 +422,10 @@ export const SimulasiPageView: React.FC<SimulasiPageViewProps> = ({
                     <button
                       type="button"
                       onClick={openDashboard}
-                      className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-teal-800 hover:text-teal-900 transition-colors cursor-pointer shrink-0"
+                      className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-teal-800 hover:text-teal-900 bg-teal-50 border border-teal-200 px-3 py-1.5 rounded-lg transition-colors cursor-pointer shrink-0"
                     >
                       <LayoutDashboard className="w-3.5 h-3.5 shrink-0" />
-                      <span>Lihat Dashboard Simulasi</span>
+                      <span>Mode Demo 2 Sisi (Input–Output)</span>
                     </button>
                   </div>
 
@@ -530,28 +506,55 @@ export const SimulasiPageView: React.FC<SimulasiPageViewProps> = ({
                     displayDecision={displayDecision}
                     evidenceLabel={evidenceLabel}
                   />
+                ) : currentStageMeta.id === 'economics' ? (
+                  <EconomicsStageView
+                    study={study}
+                    characterization={characterization}
+                    mix={mix}
+                    economics={economics}
+                    batchInputs={batchInputs}
+                    studyMode={studyMode}
+                    paperScenarioName={paperScenarioName}
+                    paperScenario={paperScenario}
+                    paperBridge={paperBridge}
+                    paperMeta={paperMeta}
+                    onUpdateEconomicsField={updateEconomicsField}
+                    onUpdateBatchInputsField={updateBatchInputsField}
+                    onSelectStage={selectStage}
+                    formatIdr={formatIdr}
+                    displayDecision={displayDecision}
+                    evidenceLabel={evidenceLabel}
+                  />
+                ) : currentStageMeta.id === 'environment' ? (
+                  <EnvironmentStageView
+                    study={study}
+                    characterization={characterization}
+                    mix={mix}
+                    economics={economics}
+                    batchInputs={batchInputs}
+                    studyMode={studyMode}
+                    onUpdateMixField={updateMixField}
+                    onUpdateEconomicsField={updateEconomicsField}
+                    onUpdateBatchInputsField={updateBatchInputsField}
+                    onSelectStage={selectStage}
+                    displayDecision={displayDecision}
+                    evidenceLabel={evidenceLabel}
+                  />
                 ) : (
-                  /* Clearly Marked Stage Content Placeholder (Stages 06 - 08) */
-                  <div
-                    data-testid="stage-placeholder-notice"
-                    className="rounded-xl sm:rounded-2xl bg-slate-50 border border-dashed border-slate-300 p-4 sm:p-6 md:p-8 space-y-2.5 sm:space-y-3"
-                  >
-                    <div className="flex flex-wrap items-center gap-1.5 text-xs font-semibold text-emerald-800">
-                      <Clock className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span>
-                        Placeholder Fase 1 · Tahap {currentStageMeta.stageNumber}{' '}
-                        ({currentStageMeta.title})
-                      </span>
-                    </div>
-
-                    <h2 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-snug">
-                      Area Konten Interaktif Tahap {currentStageMeta.title}
-                    </h2>
-
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
-                      {currentStageMeta.placeholderNotice}
-                    </p>
-                  </div>
+                  <RecommendationStageView
+                    study={study}
+                    characterization={characterization}
+                    mix={mix}
+                    economics={economics}
+                    studyMode={studyMode}
+                    paperScenarioName={paperScenarioName}
+                    paperScenario={paperScenario}
+                    paperBridge={paperBridge}
+                    onSelectStage={selectStage}
+                    formatIdr={formatIdr}
+                    displayDecision={displayDecision}
+                    evidenceLabel={evidenceLabel}
+                  />
                 )}
 
                 {/* Sequential Stage Footer Navigation */}

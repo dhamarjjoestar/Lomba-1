@@ -19,8 +19,9 @@ export const NavbarView: React.FC<NavbarViewProps> = ({
 }) => {
   const navLinks: { label: string; id: PageId }[] = [
     { label: 'Beranda', id: 'beranda' },
-    { label: 'Simulasi', id: 'simulasi' },
-    { label: 'Metopen', id: 'metopen' },
+    { label: 'Cara Kerja', id: 'cara-kerja' },
+    { label: 'Simulasi Keputusan', id: 'simulasi' },
+    { label: 'Sirkular & Roadmap', id: 'sirkular-roadmap' },
     { label: 'Tim Kami', id: 'tim-kami' },
   ];
 
@@ -80,12 +81,14 @@ export const NavbarView: React.FC<NavbarViewProps> = ({
 
           {/* Zone 3: Tombol Mulai Simulasi di pojok kanan */}
           <div className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={() => onNavigate('simulasi')}
-              className="px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-emerald-700 hover:bg-emerald-800 rounded-lg shadow-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 whitespace-nowrap cursor-pointer active:scale-[0.98]"
-            >
-              <span>Mulai Simulasi</span>
-            </button>
+            {activePage !== 'simulasi' && (
+              <button
+                onClick={() => onNavigate('simulasi')}
+                className="px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-emerald-700 hover:bg-emerald-800 rounded-lg shadow-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 whitespace-nowrap cursor-pointer active:scale-[0.98]"
+              >
+                <span>Mulai Simulasi</span>
+              </button>
+            )}
 
             {/* Mobile Hamburger Toggle */}
             <button

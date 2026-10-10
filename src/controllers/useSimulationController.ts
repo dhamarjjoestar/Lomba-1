@@ -53,9 +53,9 @@ const DEFAULT_ACTUAL_BATCH_INPUTS: BatchProductionInputs = {
 };
 
 export function useSimulationController() {
-  // Workspace Stage & Supporting Dashboard Navigation State (Phase 1)
+  // Workspace Stage & Supporting Dashboard Navigation State (Default to 'dashboard' for instant 2-sided Split Demo)
   const [activeDestination, setActiveDestination] =
-    useState<SimulationDestinationId>('overview');
+    useState<SimulationDestinationId>('dashboard');
   const [lastActiveStageId, setLastActiveStageId] =
     useState<SimulationStageId>('overview');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);

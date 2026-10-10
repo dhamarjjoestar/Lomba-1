@@ -2,7 +2,13 @@ export type EvidenceLevel = 'Validated' | 'Literature-supported' | 'Screening Es
 
 export type DecisionStatus = 'Recommended' | 'Bersyarat' | 'Not Recommended' | 'Data Diperlukan';
 
-export type PageId = 'beranda' | 'simulasi' | 'metopen' | 'tim-kami';
+export type PageId =
+  | 'beranda'
+  | 'cara-kerja'
+  | 'simulasi'
+  | 'sirkular-roadmap'
+  | 'tim-kami'
+  | 'metopen';
 
 export interface ResidueOption {
   id: string;

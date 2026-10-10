@@ -981,33 +981,6 @@ export const CharacterizationStageView: React.FC<
               </ul>
             </div>
           </div>
-
-          {/* Next Stage CTA Card: Proceed to Stage 03 (Formulasi Kandidat) */}
-          <div className="rounded-xl sm:rounded-2xl bg-emerald-900 text-white p-4 sm:p-5 space-y-3">
-            <div className="space-y-1 min-w-0">
-              <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-300">
-                LANGKAH SELANJUTNYA · TAHAP 03
-              </div>
-              <h3 className="text-sm sm:text-base font-extrabold tracking-tight break-words">
-                Lanjutkan ke Formulasi Kandidat
-              </h3>
-              <p className="text-xs text-emerald-100 leading-relaxed break-words">
-                Setelah memeriksa identitas dan karakterisasi material, atur
-                proporsi substitusi semen, rasio air-pengikat (W/B), kelas mutu
-                SNI sasaran, dan dimensi blok pada Tahap 03.
-              </p>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => onSelectStage('formulation')}
-              data-testid="characterization-next-formulation-button"
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 min-h-[44px] rounded-xl bg-white text-emerald-950 hover:bg-emerald-50 text-xs sm:text-sm font-bold transition-colors cursor-pointer"
-            >
-              <span>Lanjut ke Formulasi Kandidat</span>
-              <ArrowRight className="w-4 h-4 shrink-0" />
-            </button>
-          </div>
         </div>
       </div>
     </div>

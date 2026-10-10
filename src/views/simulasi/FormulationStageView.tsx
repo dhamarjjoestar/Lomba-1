@@ -2095,30 +2095,6 @@ export const FormulationStageView: React.FC<FormulationStageViewProps> = ({
                 pengujian fisik aktual.
               </p>
             </div>
-
-            {/* Quick Navigation Actions */}
-            <div className="pt-2 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={() => onSelectStage('simulation')}
-                data-testid="button-formulation-to-simulation"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 min-h-[42px] rounded-xl text-xs font-semibold text-white bg-emerald-700 hover:bg-emerald-800 transition-colors cursor-pointer"
-              >
-                <FlaskConical className="w-3.5 h-3.5 shrink-0" />
-                <span>Lanjut ke Tahap 04: Analisis Kandidat</span>
-                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => onSelectStage('characterization')}
-                data-testid="button-formulation-to-characterization"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 min-h-[38px] rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
-              >
-                <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
-                <span>Kembali ke Tahap 02: Karakterisasi Material</span>
-              </button>
-            </div>
           </div>
         </aside>
       </div>

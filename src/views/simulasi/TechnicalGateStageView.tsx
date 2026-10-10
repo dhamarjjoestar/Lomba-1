@@ -904,63 +904,6 @@ export const TechnicalGateStageView: React.FC<TechnicalGateStageViewProps> = ({
           </div>
         </div>
       </section>
-
-      {/* SECTION F: Stage Navigation */}
-      <section
-        aria-label="Navigasi Tahap Gerbang Teknis"
-        className="rounded-xl sm:rounded-2xl border border-slate-200 bg-slate-50 p-4 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3"
-      >
-        <div className="space-y-0.5">
-          <p className="text-xs font-bold text-slate-800">
-            Navigasi Alur Kerja Evaluasi
-          </p>
-          <p className="text-[11px] text-slate-500">
-            Pintasan ke Karakterisasi (Tahap 02), Formulasi (Tahap 03), Analisis Kandidat (Tahap 04), atau lanjut ke Keekonomian (Tahap 06).
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-2">
-          <button
-            type="button"
-            onClick={() => onSelectStage('characterization')}
-            data-testid="gate-shortcut-characterization-btn"
-            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 transition-colors cursor-pointer"
-          >
-            <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
-            <span>Ke Tahap 02: Karakterisasi</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => onSelectStage('formulation')}
-            data-testid="gate-shortcut-formulation-btn"
-            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 transition-colors cursor-pointer"
-          >
-            <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
-            <span>Ke Tahap 03: Formulasi</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => onSelectStage('simulation')}
-            data-testid="gate-back-to-simulation-btn"
-            className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 transition-colors cursor-pointer"
-          >
-            <ArrowLeft className="w-4 h-4 shrink-0" />
-            <span>Kembali ke Tahap 04: Analisis Kandidat</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => onSelectStage('economics')}
-            data-testid="gate-continue-to-economics-btn"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-emerald-700 hover:bg-emerald-800 transition-colors cursor-pointer shadow-xs"
-          >
-            <span>Lanjut ke Tahap 06: Keekonomian</span>
-            <ArrowRight className="w-4 h-4 shrink-0" />
-          </button>
-        </div>
-      </section>
     </div>
   );
 };

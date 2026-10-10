@@ -3,7 +3,9 @@ import { useNavigationController } from './controllers/useNavigationController';
 import { NavbarView } from './views/components/NavbarView';
 import { FooterView } from './views/components/FooterView';
 import { HomeLandingPageView } from './views/pages/HomeLandingPageView';
+import { CaraKerjaPageView } from './views/pages/CaraKerjaPageView';
 import { SimulasiPageView } from './views/pages/SimulasiPageView';
+import { SirkularRoadmapPageView } from './views/pages/SirkularRoadmapPageView';
 import { MetopenPageView } from './views/pages/MetopenPageView';
 import { TeamPageView } from './views/pages/TeamPageView';
 
@@ -34,14 +36,22 @@ export default function App() {
         onToggleMobileMenu={toggleMobileMenu}
       />
 
-      {/* View: Active Page Routing */}
+      {/* View: Active Page Routing (5-Page Architecture) */}
       <main className="flex-1 w-full">
         {currentPage === 'beranda' && (
           <HomeLandingPageView onNavigate={navigateTo} />
         )}
 
+        {currentPage === 'cara-kerja' && (
+          <CaraKerjaPageView onNavigate={navigateTo} />
+        )}
+
         {currentPage === 'simulasi' && (
           <SimulasiPageView onBackToHome={() => navigateTo('beranda')} />
+        )}
+
+        {currentPage === 'sirkular-roadmap' && (
+          <SirkularRoadmapPageView onNavigate={navigateTo} />
         )}
 
         {currentPage === 'metopen' && (

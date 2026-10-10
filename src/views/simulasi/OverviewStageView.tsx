@@ -287,72 +287,6 @@ export const OverviewStageView: React.FC<OverviewStageViewProps> = ({
         </div>
       </div>
 
-      {/* 2. 8-Stage Evaluation Pipeline Overview */}
-      <div className="rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200 p-3.5 sm:p-5 space-y-3.5">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
-          <div className="min-w-0">
-            <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
-              ALUR KERJA EVALUASI
-            </div>
-            <h2 className="text-sm sm:text-base font-bold text-slate-900">
-              8 Tahap Evaluasi Berurutan SILICA2CON
-            </h2>
-          </div>
-          <span className="text-xs text-slate-500">
-            Klik tahap mana pun untuk berpindah langsung
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-2.5 sm:gap-3">
-          {workflowStages.map((stage) => {
-            const StageIcon = stage.icon;
-            const isCurrentOverview = stage.id === 'overview';
-            return (
-              <button
-                key={stage.id}
-                type="button"
-                onClick={() => onSelectStage(stage.id)}
-                data-testid={`overview-pipeline-step-${stage.id}`}
-                className={`p-3 min-h-[48px] rounded-xl border text-left transition-colors cursor-pointer flex flex-col justify-between gap-2 min-w-0 ${
-                  isCurrentOverview
-                    ? 'bg-emerald-700 text-white border-emerald-700'
-                    : 'bg-white hover:bg-emerald-50/60 text-slate-800 border-slate-200 hover:border-emerald-300'
-                }`}
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <span
-                    className={`px-2 py-0.5 rounded-md text-[11px] font-mono font-bold tabular-nums ${
-                      isCurrentOverview
-                        ? 'bg-emerald-800 text-emerald-100'
-                        : 'bg-slate-100 text-slate-700'
-                    }`}
-                  >
-                    Tahap {stage.stageNumber}
-                  </span>
-                  <StageIcon
-                    className={`w-4 h-4 shrink-0 ${
-                      isCurrentOverview ? 'text-emerald-200' : 'text-slate-400'
-                    }`}
-                  />
-                </div>
-                <div className="min-w-0">
-                  <div className="text-xs sm:text-sm font-bold break-words leading-snug">
-                    {stage.title}
-                  </div>
-                  <div
-                    className={`text-[11px] mt-0.5 line-clamp-2 ${
-                      isCurrentOverview ? 'text-emerald-100' : 'text-slate-500'
-                    }`}
-                  >
-                    {stage.shortLabel}
-                  </div>
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
       {/* 3. Material Snapshot & Study Readiness (Responsive Layout across Tablet/Laptop/Desktop) */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 sm:gap-6 items-start">
         {/* Left Column: Material Characterization Snapshot */}
@@ -550,33 +484,6 @@ export const OverviewStageView: React.FC<OverviewStageViewProps> = ({
             </div>
           </div>
         </div>
-      </div>
-
-      {/* 4. Next Action Callout Card */}
-      <div className="rounded-xl sm:rounded-2xl bg-emerald-900 text-white p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="space-y-1 max-w-2xl min-w-0">
-          <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-300">
-            LANGKAH SELANJUTNYA · TAHAP 02
-          </div>
-          <h3 className="text-base sm:text-lg font-extrabold tracking-tight break-words">
-            Mulai dari Karakterisasi Material
-          </h3>
-          <p className="text-xs sm:text-sm text-emerald-100 leading-relaxed break-words">
-            Tinjau atau perbarui identitas sampel, kandungan SiO₂, fase amorf,
-            ukuran partikel, dan kadar air sebelum mengatur kandidat campuran
-            paving block.
-          </p>
-        </div>
-
-        <button
-          type="button"
-          onClick={() => onSelectStage('characterization')}
-          data-testid="overview-start-characterization-button"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 min-h-[44px] rounded-xl bg-white text-emerald-950 hover:bg-emerald-50 text-xs sm:text-sm font-bold transition-colors cursor-pointer shrink-0"
-        >
-          <span>Mulai Karakterisasi</span>
-          <ArrowRight className="w-4 h-4 shrink-0" />
-        </button>
       </div>
     </div>
   );

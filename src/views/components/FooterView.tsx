@@ -82,7 +82,15 @@ export const FooterView: React.FC<FooterViewProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('beranda')}
                   className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
                 >
-                  Beranda (Rangkuman Essay)
+                  1. Beranda (Lapis Pemahaman)
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('cara-kerja')}
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
+                  2. Cara Kerja GEOCEDS (8 Gerbang)
                 </button>
               </li>
               <li>
@@ -90,15 +98,15 @@ export const FooterView: React.FC<FooterViewProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('simulasi')}
                   className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
                 >
-                  Simulasi (Page Terpisah)
+                  3. Simulasi Keputusan (Demo Interaktif)
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('metopen')}
+                  onClick={() => onNavigate('sirkular-roadmap')}
                   className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
                 >
-                  Metopen (Page Terpisah)
+                  4. Siklus Sirkular &amp; Roadmap
                 </button>
               </li>
               <li>
@@ -106,7 +114,7 @@ export const FooterView: React.FC<FooterViewProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('tim-kami')}
                   className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
                 >
-                  Tim Kami (Page Terpisah)
+                  5. Tim Kami
                 </button>
               </li>
             </ul>
